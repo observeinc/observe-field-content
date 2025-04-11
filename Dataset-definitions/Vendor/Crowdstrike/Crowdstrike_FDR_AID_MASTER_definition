@@ -1,0 +1,15 @@
+filter event_simpleName = "AgentOnline" or event_simpleName = "HostnameChanged"
+make_col ComputerName:string(_raw.ComputerName)
+make_col aid2:string(_raw.AgentIdString)
+pick_col
+    timestamp,
+    ComputerName,
+    aid:coalesce(aid,aid2),
+    aip:string(_raw.aip)
+make_resource options(expiry:duration_hr(720)),
+    ComputerName:ComputerName,
+    aip:aip,
+    primary_key(aid)
+
+set_label(ComputerName)
+

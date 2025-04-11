@@ -1,0 +1,1906 @@
+# terraform import observe_dashboard.crowdstrike_detections 45997898
+resource "observe_dashboard" "crowdstrike_detections" {
+    layout     = jsonencode(
+        {
+            autoPack        = true
+            gridLayout      = {
+                sections = [
+                    {
+                        card  = {
+                            cardType = "section"
+                            closed   = false
+                            title    = "Dashboard content"
+                        }
+                        items = [
+                            {
+                                card   = {
+                                    cardType = "stage"
+                                    stageId  = "stage-jwbi6dvi"
+                                }
+                                layout = {
+                                    h = 15
+                                    w = 2
+                                    x = 0
+                                    y = 0
+                                }
+                            },
+                            {
+                                card   = {
+                                    cardType = "stage"
+                                    stageId  = "stage-rgup0f1y"
+                                }
+                                layout = {
+                                    h = 28
+                                    w = 3
+                                    x = 2
+                                    y = 0
+                                }
+                            },
+                            {
+                                card   = {
+                                    cardType = "stage"
+                                    stageId  = "stage-1n9cij86"
+                                }
+                                layout = {
+                                    h = 13
+                                    w = 2
+                                    x = 10
+                                    y = 0
+                                }
+                            },
+                            {
+                                card   = {
+                                    cardType = "stage"
+                                    stageId  = "stage-zvvshpxp"
+                                }
+                                layout = {
+                                    h = 28
+                                    w = 5
+                                    x = 5
+                                    y = 0
+                                }
+                            },
+                            {
+                                card   = {
+                                    cardType = "stage"
+                                    stageId  = "stage-62w9bzs3"
+                                }
+                                layout = {
+                                    h = 15
+                                    w = 2
+                                    x = 10
+                                    y = 13
+                                }
+                            },
+                            {
+                                card   = {
+                                    cardType = "stage"
+                                    stageId  = "stage-96z0fhwe"
+                                }
+                                layout = {
+                                    h = 13
+                                    w = 2
+                                    x = 0
+                                    y = 15
+                                }
+                            },
+                            {
+                                card   = {
+                                    cardType = "stage"
+                                    stageId  = "stage-qxpthaqd"
+                                }
+                                layout = {
+                                    h = 15
+                                    w = 7
+                                    x = 5
+                                    y = 28
+                                }
+                            },
+                            {
+                                card   = {
+                                    cardType = "stage"
+                                    stageId  = "stage-4pnno3ba"
+                                }
+                                layout = {
+                                    h = 15
+                                    w = 5
+                                    x = 0
+                                    y = 28
+                                }
+                            },
+                            {
+                                card   = {
+                                    cardType = "stage"
+                                    stageId  = "stage-dpmkpox4"
+                                }
+                                layout = {
+                                    h = 23
+                                    w = 12
+                                    x = 0
+                                    y = 43
+                                }
+                            },
+                        ]
+                    },
+                ]
+            }
+            stageListLayout = {
+                isModified      = false
+                parameters      = [
+                    {
+                        autoApply             = true
+                        datasetId             = "45996226"
+                        defaultValue          = {
+                            datasetref = {
+                                datasetId = "45996226"
+                            }
+                        }
+                        emptyValueEncoding    = "null"
+                        emptyValueLabelOption = "null"
+                        filterActions         = []
+                        id                    = "input-parameter-bfwtdgbo"
+                        name                  = "Crowdstrike Detections"
+                        valueKind             = {
+                            type = "DATASETREF"
+                        }
+                        viewType              = "input"
+                    },
+                ]
+                selectedStageId = "stage-zvvshpxp"
+                timeRange       = {
+                    display               = "Past 7 days"
+                    endTime               = null
+                    millisFromCurrentTime = 604800000
+                    originalDisplay       = "Past 7 days"
+                    startTime             = null
+                    timeRangeInfo         = {
+                        key        = "PRESETS"
+                        name       = "Presets"
+                        presetType = "PAST_7_DAYS"
+                    }
+                }
+            }
+        }
+    )
+    name       = "CrowdStrike Detections"
+    parameters = jsonencode(
+        [
+            {
+                defaultValue = {
+                    datasetref = {
+                        datasetId = "45996226"
+                    }
+                }
+                id           = "input-parameter-bfwtdgbo"
+                name         = "Crowdstrike Detections"
+                valueKind    = {
+                    arrayItemType   = null
+                    keyForDatasetId = null
+                    type            = "DATASETREF"
+                }
+            },
+        ]
+    )
+    stages     = jsonencode(
+        [
+            {
+                id       = "stage-rgup0f1y"
+                input    = [
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Crowdstrike Detections"
+                        inputRole   = "Data"
+                        stageId     = null
+                    },
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Crowdstrike/Crowdstrike Detections_a94uw"
+                        inputRole   = "Data"
+                        stageId     = null
+                    },
+                ]
+                layout   = {
+                    cardLinks          = []
+                    dataLinks          = []
+                    dataTableViewState = {
+                        autoExpandColumnWidth       = false
+                        cellValuePresentation       = []
+                        columnOrderOverride         = []
+                        columnVisibility            = []
+                        columnWidths                = []
+                        defaultColumnWidth          = 70
+                        disableFixedLeftColumns     = false
+                        minColumnWidth              = 60
+                        preserveCellAndRowSelection = true
+                        rowHeights                  = []
+                        selection                   = {
+                            cells                = {}
+                            columnSelectSequence = []
+                            columns              = {}
+                            highlightState       = {}
+                            rows                 = {}
+                            selectionType        = "table"
+                        }
+                        tableWidth                  = 1208
+                        viewType                    = "Auto"
+                    }
+                    disableOutput      = false
+                    index              = 0
+                    inputList          = [
+                        {
+                            id          = "query-input-0ofg7mum"
+                            inputName   = "Crowdstrike Detections"
+                            inputRole   = "Data"
+                            isUserInput = false
+                            parameterId = "input-parameter-bfwtdgbo"
+                        },
+                        {
+                            id          = "query-input-ffkaiy82"
+                            inputName   = "Crowdstrike/Crowdstrike Detections_a94uw"
+                            inputRole   = "Data"
+                            isUserInput = true
+                            parameterId = "input-parameter-bfwtdgbo"
+                        },
+                    ]
+                    isInternal         = false
+                    label              = "User Execution Map"
+                    managers           = [
+                        {
+                            id         = "jk4teo6p"
+                            isDisabled = false
+                            type       = "Vis"
+                            vis        = {
+                                config = {
+                                    disableDrag              = false
+                                    disableForcesAfterLayout = false
+                                    edgeCurveType            = "Curve"
+                                    gridSize                 = 50
+                                    nodeLabelPlacement       = "right"
+                                    nodeStyle                = "filled"
+                                    showArrows               = true
+                                    type                     = "force_displacement"
+                                    useGrid                  = true
+                                }
+                                source = {
+                                    table = {
+                                        destinationField = "FileName"
+                                        sourceField      = "UserName"
+                                        transformType    = "none"
+                                        type             = "graph"
+                                    }
+                                    topK  = {
+                                        k     = 10000
+                                        order = "Top"
+                                        type  = "Auto"
+                                    }
+                                    type  = "table"
+                                }
+                                type   = "force_displacement"
+                            }
+                        },
+                    ]
+                    queryPresentation  = {
+                        columnStats         = {
+                            histogramBucketCount = "100"
+                            needDistinctCount    = true
+                            topKCount            = "100"
+                        }
+                        initialRollupFilter = {
+                            mode = "Last"
+                        }
+                        limit               = 10000
+                        linkify             = true
+                        loadEverything      = false
+                        progressive         = true
+                        resultKinds         = [
+                            "ResultKindSchema",
+                            "ResultKindData",
+                            "ResultKindColumnStats",
+                            "ResultKindVolumeStats",
+                            "ResultKindProgress",
+                        ]
+                        rollup              = {}
+                        volumeStats         = {
+                            bucketCount    = "100"
+                            needTotalCount = true
+                        }
+                        wantBuckets         = 100
+                    }
+                    renderType         = "TABLE"
+                    serializable       = true
+                    steps              = [
+                        {
+                            customName    = "Input"
+                            customSummary = "Crowdstrike Detections"
+                            id            = "step-j6amc0kl"
+                            index         = 0
+                            isPinned      = false
+                            opal          = []
+                            type          = "InputStep"
+                        },
+                        {
+                            customSummary = ""
+                            id            = "step-30kw254u"
+                            index         = 1
+                            isPinned      = false
+                            opal          = [
+                                "statsby group_by(UserName,FileName)",
+                            ]
+                            type          = "unknown"
+                        },
+                    ]
+                    type               = "table"
+                    viewModel          = {
+                        builderOpalTab       = "OPAL"
+                        inspectRailCollapsed = true
+                        inspectRailPinned    = false
+                        inspectRailWidth     = 640
+                        railCollapseState    = {
+                            inputsOutputs = false
+                            minimap       = false
+                            note          = true
+                            script        = true
+                        }
+                        showTimeRuler        = true
+                        stageTab             = "vis"
+                    }
+                }
+                params   = null
+                pipeline = "statsby group_by(UserName,FileName)"
+            },
+            {
+                id       = "stage-jwbi6dvi"
+                input    = [
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Crowdstrike Detections"
+                        inputRole   = "Data"
+                        stageId     = null
+                    },
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Crowdstrike/Crowdstrike Detections_a94uw"
+                        inputRole   = "Data"
+                        stageId     = null
+                    },
+                ]
+                layout   = {
+                    cardLinks          = []
+                    dataLinks          = []
+                    dataTableViewState = {
+                        autoExpandColumnWidth       = false
+                        cellValuePresentation       = []
+                        columnOrderOverride         = []
+                        columnVisibility            = []
+                        columnWidths                = []
+                        defaultColumnWidth          = 70
+                        disableFixedLeftColumns     = false
+                        minColumnWidth              = 60
+                        preserveCellAndRowSelection = true
+                        rowHeights                  = []
+                        selection                   = {
+                            cells                = {}
+                            columnSelectSequence = []
+                            columns              = {}
+                            highlightState       = {}
+                            rows                 = {}
+                            selectionType        = "table"
+                        }
+                        tableWidth                  = 1208
+                        viewType                    = "Auto"
+                    }
+                    disableOutput      = false
+                    index              = 1
+                    inputList          = [
+                        {
+                            id          = "query-input-0ofg7mum"
+                            inputName   = "Crowdstrike Detections"
+                            inputRole   = "Data"
+                            isUserInput = false
+                            parameterId = "input-parameter-bfwtdgbo"
+                        },
+                        {
+                            id          = "query-input-ffkaiy82"
+                            inputName   = "Crowdstrike/Crowdstrike Detections_a94uw"
+                            inputRole   = "Data"
+                            isUserInput = true
+                            parameterId = "input-parameter-bfwtdgbo"
+                        },
+                    ]
+                    isInternal         = false
+                    label              = "Log Explorer"
+                    managers           = [
+                        {
+                            id         = "v4a6vdc9"
+                            isDisabled = false
+                            type       = "Vis"
+                            vis        = {
+                                config = {
+                                    color           = "Red"
+                                    colorConfigType = "Color"
+                                    fieldConfig     = {
+                                        unit    = ""
+                                        visible = false
+                                    }
+                                    fieldValue      = ""
+                                    singleStatLabel = "Detection Count"
+                                    thresholds      = null
+                                    type            = "singlefield"
+                                }
+                                source = {
+                                    table = {
+                                        field         = "A_CrowdstrikeDetections_count"
+                                        statsBy       = {
+                                            fn = "count"
+                                        }
+                                        timechart     = {
+                                            fn         = "count"
+                                            fnArgs     = null
+                                            resolution = "AUTO"
+                                        }
+                                        transformType = "none"
+                                        type          = "singlefield"
+                                    }
+                                    topK  = {
+                                        order = "Top"
+                                        type  = "Auto"
+                                    }
+                                    type  = "table"
+                                }
+                                type   = "singlevalue"
+                            }
+                        },
+                    ]
+                    queryPresentation  = {
+                        columnStats         = {
+                            histogramBucketCount = "100"
+                            needDistinctCount    = true
+                            topKCount            = "100"
+                        }
+                        initialRollupFilter = {
+                            mode = "Last"
+                        }
+                        resultKinds         = [
+                            "ResultKindSchema",
+                        ]
+                        rollup              = {}
+                        sort                = [
+                            {
+                                ascending  = false
+                                columnName = "A_CrowdstrikeDetections_count"
+                            },
+                        ]
+                        volumeStats         = {
+                            bucketCount    = "100"
+                            needTotalCount = true
+                        }
+                        wantBuckets         = 50
+                    }
+                    serializable       = true
+                    steps              = [
+                        {
+                            customName    = "Input"
+                            customSummary = "Crowdstrike Detections"
+                            id            = "step-h02q7san"
+                            index         = 0
+                            isPinned      = false
+                            opal          = []
+                            type          = "InputStep"
+                        },
+                        {
+                            action        = {
+                                params  = {
+                                    expressionList = {
+                                        aggregationMode       = "aggregate"
+                                        expressions           = [
+                                            {
+                                                dataVis              = {
+                                                    config = {
+                                                        color           = "Red"
+                                                        colorConfigType = "Color"
+                                                        fieldConfig     = {
+                                                            unit    = ""
+                                                            visible = false
+                                                        }
+                                                        fieldValue      = ""
+                                                        singleStatLabel = "Detection Count"
+                                                        thresholds      = null
+                                                        type            = "singlefield"
+                                                    }
+                                                    source = {
+                                                        table = {
+                                                            field         = "A_CrowdstrikeDetections_count"
+                                                            statsBy       = {
+                                                                fn = "count"
+                                                            }
+                                                            timechart     = {
+                                                                fn         = "count"
+                                                                fnArgs     = null
+                                                                resolution = "AUTO"
+                                                            }
+                                                            transformType = "none"
+                                                            type          = "singlefield"
+                                                        }
+                                                        topK  = {
+                                                            order = "Top"
+                                                            type  = "Auto"
+                                                        }
+                                                        type  = "table"
+                                                    }
+                                                    type   = "singlevalue"
+                                                }
+                                                expressionIdentifier = "A"
+                                                field                = "***row***"
+                                                filterActions        = []
+                                                groupBy              = []
+                                                id                   = "datasetQueryExpression-k8m8fg2y"
+                                                inputSource          = {
+                                                    parameterId = "input-parameter-bfwtdgbo"
+                                                }
+                                                invalidGroupBy       = []
+                                                lookupActions        = []
+                                                summaryFunction      = "count"
+                                                summaryMode          = "single"
+                                                type                 = "datasetQueryExpression"
+                                                valueColumnId        = "A_CrowdstrikeDetections_count"
+                                                viewTab              = "visualize"
+                                            },
+                                        ]
+                                        multiExpression       = {
+                                            expressionIdentifier = "A"
+                                            filterActions        = []
+                                            id                   = "multiExpression-7km4uopb"
+                                            lookupActions        = []
+                                            type                 = "multiExpression"
+                                            viewTab              = "visualize"
+                                        }
+                                        selectedExpressionIds = [
+                                            "datasetQueryExpression-k8m8fg2y",
+                                        ]
+                                        shouldLimitPatterns   = true
+                                    }
+                                }
+                                summary = null
+                                type    = "ExpressionBuilder"
+                            }
+                            customSummary = "Expression Builder"
+                            id            = "step-qwjaem3l"
+                            index         = 1
+                            isPinned      = false
+                            opal          = [
+                                "statsby A_CrowdstrikeDetections_count:count(), group_by()",
+                            ]
+                            type          = "unknown"
+                        },
+                    ]
+                    type               = "table"
+                    viewModel          = {
+                        builderOpalTab       = "Builder"
+                        inspectRailCollapsed = true
+                        inspectRailPinned    = false
+                        inspectRailWidth     = 640
+                        railCollapseState    = {
+                            inputsOutputs = false
+                            minimap       = false
+                            note          = true
+                            script        = true
+                        }
+                        showTimeRuler        = true
+                        stageTab             = "vis"
+                    }
+                }
+                params   = null
+                pipeline = "statsby A_CrowdstrikeDetections_count:count(), group_by()"
+            },
+            {
+                id       = "stage-96z0fhwe"
+                input    = [
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Crowdstrike Detections"
+                        inputRole   = "Data"
+                        stageId     = null
+                    },
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Crowdstrike/Crowdstrike Detections_a94uw"
+                        inputRole   = "Data"
+                        stageId     = null
+                    },
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Crowdstrike/Crowdstrike Detections_jcz9t"
+                        inputRole   = "Data"
+                        stageId     = null
+                    },
+                ]
+                layout   = {
+                    cardLinks          = []
+                    dataLinks          = []
+                    dataTableViewState = {
+                        autoExpandColumnWidth       = false
+                        cellValuePresentation       = []
+                        columnOrderOverride         = []
+                        columnVisibility            = []
+                        columnWidths                = []
+                        defaultColumnWidth          = 70
+                        disableFixedLeftColumns     = false
+                        minColumnWidth              = 60
+                        preserveCellAndRowSelection = true
+                        rowHeights                  = []
+                        selection                   = {
+                            cells                = {}
+                            columnSelectSequence = []
+                            columns              = {}
+                            highlightState       = {}
+                            rows                 = {}
+                            selectionType        = "table"
+                        }
+                        tableWidth                  = 1208
+                        viewType                    = "Auto"
+                    }
+                    disableOutput      = false
+                    index              = 2
+                    inputList          = [
+                        {
+                            id          = "query-input-0ofg7mum"
+                            inputName   = "Crowdstrike Detections"
+                            inputRole   = "Data"
+                            isUserInput = false
+                            parameterId = "input-parameter-bfwtdgbo"
+                        },
+                        {
+                            id          = "query-input-ffkaiy82"
+                            inputName   = "Crowdstrike/Crowdstrike Detections_a94uw"
+                            inputRole   = "Data"
+                            isUserInput = true
+                            parameterId = "input-parameter-bfwtdgbo"
+                        },
+                        {
+                            id          = "query-input-swmpew31"
+                            inputName   = "Crowdstrike/Crowdstrike Detections_jcz9t"
+                            inputRole   = "Data"
+                            isUserInput = true
+                            parameterId = "input-parameter-bfwtdgbo"
+                        },
+                    ]
+                    isInternal         = false
+                    label              = "Detections by Severity"
+                    managers           = [
+                        {
+                            id         = "d97mx2s0"
+                            isDisabled = false
+                            type       = "Vis"
+                            vis        = {
+                                config = {
+                                    colorMapping = [
+                                        {
+                                            color = "Blue"
+                                            key   = "1"
+                                        },
+                                        {
+                                            color = "Green"
+                                            key   = "2"
+                                        },
+                                        {
+                                            color = "Yellow"
+                                            key   = "3"
+                                        },
+                                        {
+                                            color = "Red"
+                                            key   = "4"
+                                        },
+                                        {
+                                            color = "Purple"
+                                            key   = "5"
+                                        },
+                                    ]
+                                    innerRadius  = 0.6
+                                    legend       = {
+                                        type    = "list"
+                                        visible = true
+                                    }
+                                    type         = "arc"
+                                }
+                                source = {
+                                    table = {
+                                        statsBy       = {
+                                            fn = "avg"
+                                        }
+                                        timechart     = {
+                                            fn         = "avg"
+                                            resolution = "SINGLE"
+                                        }
+                                        transformType = "none"
+                                        type          = "keyvalue"
+                                        valueField    = "A_CrowdstrikeDetections_count"
+                                    }
+                                    type  = "table"
+                                }
+                                type   = "circular"
+                            }
+                        },
+                    ]
+                    queryPresentation  = {
+                        columnStats         = {
+                            histogramBucketCount = "100"
+                            needDistinctCount    = true
+                            topKCount            = "100"
+                        }
+                        initialRollupFilter = {
+                            mode = "Last"
+                        }
+                        resultKinds         = [
+                            "ResultKindSchema",
+                            "ResultKindData",
+                            "ResultKindColumnStats",
+                            "ResultKindVolumeStats",
+                            "ResultKindProgress",
+                        ]
+                        rollup              = {}
+                        sort                = [
+                            {
+                                ascending  = true
+                                columnName = "A_CrowdstrikeDetections_count"
+                            },
+                        ]
+                        volumeStats         = {
+                            bucketCount    = "100"
+                            needTotalCount = true
+                        }
+                        wantBuckets         = 1
+                    }
+                    serializable       = true
+                    steps              = [
+                        {
+                            customName    = "Input"
+                            customSummary = "Crowdstrike Detections"
+                            id            = "step-5xxbet7h"
+                            index         = 0
+                            isPinned      = false
+                            opal          = []
+                            type          = "InputStep"
+                        },
+                        {
+                            customSummary = ""
+                            id            = "step-w7a4i6k0"
+                            index         = 1
+                            isPinned      = false
+                            opal          = [
+                                "statsby A_CrowdstrikeDetections_count:count(), group_by(Severity)",
+                                "",
+                            ]
+                            type          = "unknown"
+                        },
+                    ]
+                    type               = "table"
+                    viewModel          = {
+                        builderOpalTab       = "OPAL"
+                        inspectRailCollapsed = true
+                        inspectRailPinned    = false
+                        inspectRailWidth     = 640
+                        railCollapseState    = {
+                            inputsOutputs = false
+                            minimap       = false
+                            note          = true
+                            script        = true
+                        }
+                        showTimeRuler        = true
+                        stageTab             = "vis"
+                    }
+                }
+                params   = null
+                pipeline = <<-EOT
+                    statsby A_CrowdstrikeDetections_count:count(), group_by(Severity)
+                EOT
+            },
+            {
+                id       = "stage-qxpthaqd"
+                input    = [
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Crowdstrike Detections"
+                        inputRole   = "Data"
+                        stageId     = null
+                    },
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Crowdstrike/Crowdstrike Detections_a94uw"
+                        inputRole   = "Data"
+                        stageId     = null
+                    },
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Crowdstrike/Crowdstrike Detections_jcz9t"
+                        inputRole   = "Data"
+                        stageId     = null
+                    },
+                ]
+                layout   = {
+                    cardLinks          = []
+                    dataLinks          = []
+                    dataTableViewState = {
+                        autoExpandColumnWidth       = false
+                        cellValuePresentation       = []
+                        columnOrderOverride         = []
+                        columnVisibility            = []
+                        columnWidths                = []
+                        defaultColumnWidth          = 70
+                        disableFixedLeftColumns     = false
+                        minColumnWidth              = 60
+                        preserveCellAndRowSelection = true
+                        rowHeights                  = []
+                        selection                   = {
+                            cells                = {}
+                            columnSelectSequence = []
+                            columns              = {}
+                            highlightState       = {}
+                            rows                 = {}
+                            selectionType        = "table"
+                        }
+                        tableWidth                  = 1208
+                        viewType                    = "Auto"
+                    }
+                    disableOutput      = false
+                    index              = 3
+                    inputList          = [
+                        {
+                            id          = "query-input-0ofg7mum"
+                            inputName   = "Crowdstrike Detections"
+                            inputRole   = "Data"
+                            isUserInput = false
+                            parameterId = "input-parameter-bfwtdgbo"
+                        },
+                        {
+                            id          = "query-input-ffkaiy82"
+                            inputName   = "Crowdstrike/Crowdstrike Detections_a94uw"
+                            inputRole   = "Data"
+                            isUserInput = true
+                            parameterId = "input-parameter-bfwtdgbo"
+                        },
+                        {
+                            id          = "query-input-swmpew31"
+                            inputName   = "Crowdstrike/Crowdstrike Detections_jcz9t"
+                            inputRole   = "Data"
+                            isUserInput = true
+                            parameterId = "input-parameter-bfwtdgbo"
+                        },
+                    ]
+                    isInternal         = false
+                    label              = "Detections by Technique"
+                    managers           = [
+                        {
+                            id         = "qtdf01fy"
+                            isDisabled = false
+                            type       = "Vis"
+                            vis        = {
+                                config = {
+                                    annotations         = []
+                                    areaFillType        = "SolidFill"
+                                    legend              = {
+                                        type    = "list"
+                                        visible = true
+                                    }
+                                    thresholds          = {
+                                        startingColor = "Default"
+                                        thresholds    = []
+                                        visible       = false
+                                    }
+                                    type                = "bar"
+                                    xAxisLabelPlacement = "horizontal"
+                                    xConfig             = {
+                                        visible = true
+                                    }
+                                    yConfig             = {
+                                        visible = true
+                                    }
+                                }
+                                source = {
+                                    table = {
+                                        statsBy       = {
+                                            fn = "avg"
+                                        }
+                                        timechart     = {
+                                            fn         = "avg"
+                                            fnArgs     = null
+                                            resolution = "AUTO"
+                                        }
+                                        transformType = "none"
+                                        type          = "xy"
+                                        x             = "Technique"
+                                        y             = "A_Technique_count"
+                                    }
+                                    type  = "table"
+                                }
+                                type   = "bar"
+                            }
+                        },
+                    ]
+                    queryPresentation  = {
+                        columnStats         = {
+                            histogramBucketCount = "100"
+                            needDistinctCount    = true
+                            topKCount            = "100"
+                        }
+                        initialRollupFilter = {
+                            mode = "Last"
+                        }
+                        resultKinds         = [
+                            "ResultKindSchema",
+                            "ResultKindData",
+                            "ResultKindColumnStats",
+                            "ResultKindVolumeStats",
+                            "ResultKindProgress",
+                        ]
+                        rollup              = {}
+                        sort                = [
+                            {
+                                ascending  = true
+                                columnName = "A_CrowdstrikeDetections_count"
+                            },
+                        ]
+                        volumeStats         = {
+                            bucketCount    = "100"
+                            needTotalCount = true
+                        }
+                        wantBuckets         = 30
+                    }
+                    serializable       = true
+                    steps              = [
+                        {
+                            customName    = "Input"
+                            customSummary = "Crowdstrike Detections"
+                            id            = "step-7c16xjn4"
+                            index         = 0
+                            isPinned      = false
+                            opal          = []
+                            type          = "InputStep"
+                        },
+                        {
+                            customSummary = ""
+                            id            = "step-jyqia7w6"
+                            index         = 1
+                            isPinned      = false
+                            opal          = [
+                                "statsby A_Technique_count:count(Technique), group_by(Technique)",
+                            ]
+                            type          = "unknown"
+                        },
+                    ]
+                    type               = "table"
+                    viewModel          = {
+                        builderOpalTab       = "OPAL"
+                        inspectRailCollapsed = true
+                        inspectRailPinned    = false
+                        inspectRailWidth     = 640
+                        railCollapseState    = {
+                            inputsOutputs = false
+                            minimap       = false
+                            note          = true
+                            script        = true
+                        }
+                        showTimeRuler        = true
+                        stageTab             = "vis"
+                    }
+                }
+                params   = null
+                pipeline = "statsby A_Technique_count:count(Technique), group_by(Technique)"
+            },
+            {
+                id       = "stage-zvvshpxp"
+                input    = [
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Crowdstrike Detections"
+                        inputRole   = "Data"
+                        stageId     = null
+                    },
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Crowdstrike/Crowdstrike Detections_a94uw"
+                        inputRole   = "Data"
+                        stageId     = null
+                    },
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Crowdstrike/Crowdstrike Detections_jcz9t"
+                        inputRole   = "Data"
+                        stageId     = null
+                    },
+                ]
+                layout   = {
+                    cardLinks          = []
+                    dataLinks          = []
+                    dataTableViewState = {
+                        autoExpandColumnWidth       = false
+                        cellValuePresentation       = []
+                        columnOrderOverride         = []
+                        columnVisibility            = []
+                        columnWidths                = []
+                        defaultColumnWidth          = 70
+                        disableFixedLeftColumns     = false
+                        minColumnWidth              = 60
+                        preserveCellAndRowSelection = true
+                        rowHeights                  = []
+                        selection                   = {
+                            cells                = {}
+                            columnSelectSequence = []
+                            columns              = {}
+                            highlightState       = {}
+                            rows                 = {}
+                            selectionType        = "table"
+                        }
+                        tableWidth                  = 1208
+                        viewType                    = "Auto"
+                    }
+                    disableOutput      = false
+                    index              = 4
+                    inputList          = [
+                        {
+                            id          = "query-input-0ofg7mum"
+                            inputName   = "Crowdstrike Detections"
+                            inputRole   = "Data"
+                            isUserInput = false
+                            parameterId = "input-parameter-bfwtdgbo"
+                        },
+                        {
+                            id          = "query-input-ffkaiy82"
+                            inputName   = "Crowdstrike/Crowdstrike Detections_a94uw"
+                            inputRole   = "Data"
+                            isUserInput = true
+                            parameterId = "input-parameter-bfwtdgbo"
+                        },
+                        {
+                            id          = "query-input-swmpew31"
+                            inputName   = "Crowdstrike/Crowdstrike Detections_jcz9t"
+                            inputRole   = "Data"
+                            isUserInput = true
+                            parameterId = "input-parameter-bfwtdgbo"
+                        },
+                    ]
+                    isInternal         = false
+                    label              = "Detection Severity to Technique Graph"
+                    managers           = [
+                        {
+                            id         = "5wwmxln1"
+                            isDisabled = false
+                            type       = "Vis"
+                            vis        = {
+                                config = {
+                                    disableDrag              = false
+                                    disableForcesAfterLayout = false
+                                    edgeCurveType            = "Curve"
+                                    gridSize                 = 50
+                                    nodeLabelPlacement       = "right"
+                                    nodeStyle                = "filled"
+                                    showArrows               = true
+                                    type                     = "force_displacement"
+                                    useGrid                  = true
+                                }
+                                source = {
+                                    table = {
+                                        destinationField = "Technique"
+                                        sourceField      = "Severity"
+                                        transformType    = "none"
+                                        type             = "graph"
+                                    }
+                                    type  = "table"
+                                }
+                                type   = "force_displacement"
+                            }
+                        },
+                    ]
+                    queryPresentation  = {
+                        columnStats         = {
+                            histogramBucketCount = "100"
+                            needDistinctCount    = true
+                            topKCount            = "100"
+                        }
+                        initialRollupFilter = {
+                            mode = "Last"
+                        }
+                        resultKinds         = [
+                            "ResultKindSchema",
+                            "ResultKindData",
+                            "ResultKindColumnStats",
+                            "ResultKindVolumeStats",
+                            "ResultKindProgress",
+                        ]
+                        rollup              = {}
+                        sort                = [
+                            {
+                                ascending  = true
+                                columnName = "A_CrowdstrikeDetections_count"
+                            },
+                        ]
+                        volumeStats         = {
+                            bucketCount    = "100"
+                            needTotalCount = true
+                        }
+                        wantBuckets         = 150
+                    }
+                    serializable       = true
+                    steps              = [
+                        {
+                            customName    = "Input"
+                            customSummary = "Crowdstrike Detections"
+                            id            = "step-lr5ruo4u"
+                            index         = 0
+                            isPinned      = false
+                            opal          = []
+                            type          = "InputStep"
+                        },
+                        {
+                            customSummary = ""
+                            id            = "step-61pd62l5"
+                            index         = 1
+                            isPinned      = false
+                            opal          = [
+                                "statsby A_Technique_count:count(Technique), group_by(Severity, Technique)",
+                            ]
+                            type          = "unknown"
+                        },
+                    ]
+                    type               = "table"
+                    viewModel          = {
+                        builderOpalTab       = "OPAL"
+                        inspectRailCollapsed = true
+                        inspectRailPinned    = false
+                        inspectRailWidth     = 640
+                        railCollapseState    = {
+                            inputsOutputs = false
+                            minimap       = false
+                            note          = true
+                            script        = true
+                        }
+                        showTimeRuler        = true
+                        stageTab             = "vis"
+                    }
+                }
+                params   = null
+                pipeline = "statsby A_Technique_count:count(Technique), group_by(Severity, Technique)"
+            },
+            {
+                id       = "stage-dpmkpox4"
+                input    = [
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Crowdstrike Detections"
+                        inputRole   = "Data"
+                        stageId     = null
+                    },
+                ]
+                layout   = {
+                    cardLinks          = []
+                    dataLinks          = []
+                    dataTableViewState = {
+                        autoExpandColumnWidth       = false
+                        cellValuePresentation       = []
+                        columnOrderOverride         = []
+                        columnVisibility            = []
+                        columnWidths                = []
+                        defaultColumnWidth          = 70
+                        disableFixedLeftColumns     = false
+                        minColumnWidth              = 60
+                        preserveCellAndRowSelection = true
+                        rowHeights                  = []
+                        selection                   = {
+                            cells                = {}
+                            columnSelectSequence = []
+                            columns              = {}
+                            highlightState       = {}
+                            rows                 = {}
+                            selectionType        = "table"
+                        }
+                        tableWidth                  = 1016
+                        viewType                    = "Auto"
+                    }
+                    disableOutput      = false
+                    index              = 5
+                    inputList          = [
+                        {
+                            id          = "query-input-0ofg7mum"
+                            inputName   = "Crowdstrike Detections"
+                            inputRole   = "Data"
+                            isUserInput = false
+                            parameterId = "input-parameter-bfwtdgbo"
+                        },
+                    ]
+                    isInternal         = false
+                    label              = "Detections Full"
+                    managers           = []
+                    queryPresentation  = {
+                        columnStats         = {
+                            histogramBucketCount = "100"
+                            needDistinctCount    = true
+                            topKCount            = "100"
+                        }
+                        initialRollupFilter = {
+                            mode = "Last"
+                        }
+                        resultKinds         = [
+                            "ResultKindSchema",
+                            "ResultKindData",
+                            "ResultKindColumnStats",
+                            "ResultKindVolumeStats",
+                            "ResultKindProgress",
+                        ]
+                        rollup              = {}
+                        sort                = [
+                            {
+                                ascending  = true
+                                columnName = "A_CrowdstrikeDetections_count"
+                            },
+                        ]
+                        volumeStats         = {
+                            bucketCount    = "100"
+                            needTotalCount = true
+                        }
+                    }
+                    serializable       = true
+                    steps              = [
+                        {
+                            customName    = "Input"
+                            customSummary = "Crowdstrike Detections"
+                            id            = "step-6n2ucron"
+                            index         = 0
+                            isPinned      = false
+                            opal          = []
+                            type          = "InputStep"
+                        },
+                        {
+                            action        = {
+                                params  = {
+                                    expressionList = {
+                                        aggregationMode       = "raw"
+                                        expressions           = [
+                                            {
+                                                dataVis              = {
+                                                    config = {
+                                                        color           = "Default"
+                                                        colorConfigType = "Color"
+                                                        fieldConfig     = {
+                                                            unit    = ""
+                                                            visible = false
+                                                        }
+                                                        fieldValue      = ""
+                                                        singleStatLabel = ""
+                                                        thresholds      = null
+                                                        type            = "singlefield"
+                                                    }
+                                                    source = {
+                                                        table = {
+                                                            field         = "A_CrowdstrikeDetections_count"
+                                                            statsBy       = {
+                                                                fn = "count"
+                                                            }
+                                                            timechart     = {
+                                                                fn         = "count"
+                                                                fnArgs     = null
+                                                                resolution = "AUTO"
+                                                            }
+                                                            transformType = "none"
+                                                            type          = "singlefield"
+                                                        }
+                                                        topK  = {
+                                                            order = "Top"
+                                                            type  = "Auto"
+                                                        }
+                                                        type  = "table"
+                                                    }
+                                                    type   = "singlevalue"
+                                                }
+                                                expressionIdentifier = "A"
+                                                field                = "***row***"
+                                                filterActions        = []
+                                                groupBy              = []
+                                                id                   = "datasetQueryExpression-k8m8fg2y"
+                                                inputSource          = {
+                                                    parameterId = "input-parameter-bfwtdgbo"
+                                                }
+                                                invalidGroupBy       = []
+                                                lookupActions        = []
+                                                summaryFunction      = "count"
+                                                summaryMode          = "no-aggregate"
+                                                type                 = "datasetQueryExpression"
+                                                valueColumnId        = "A_CrowdstrikeDetections_count"
+                                                viewTab              = "visualize"
+                                            },
+                                        ]
+                                        multiExpression       = {
+                                            expressionIdentifier = "A"
+                                            filterActions        = []
+                                            id                   = "multiExpression-7km4uopb"
+                                            lookupActions        = []
+                                            type                 = "multiExpression"
+                                            viewTab              = "visualize"
+                                        }
+                                        selectedExpressionIds = [
+                                            "datasetQueryExpression-k8m8fg2y",
+                                        ]
+                                        shouldLimitPatterns   = true
+                                    }
+                                }
+                                summary = null
+                                type    = "ExpressionBuilder"
+                            }
+                            customSummary = "Expression Builder"
+                            id            = "step-fkp6ps7u"
+                            index         = 1
+                            isPinned      = false
+                            opal          = []
+                            type          = "unknown"
+                        },
+                    ]
+                    type               = "table"
+                    viewModel          = {
+                        builderOpalTab       = "OPAL"
+                        inspectRailCollapsed = true
+                        inspectRailPinned    = false
+                        inspectRailWidth     = 640
+                        railCollapseState    = {
+                            inputsOutputs = false
+                            minimap       = false
+                            note          = true
+                            script        = true
+                        }
+                        showTimeRuler        = true
+                        stageTab             = "table"
+                        thumbnailId          = "pksaujf3"
+                    }
+                }
+                params   = null
+                pipeline = ""
+            },
+            {
+                id       = "stage-1n9cij86"
+                input    = [
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Crowdstrike Detections"
+                        inputRole   = "Data"
+                        stageId     = null
+                    },
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Crowdstrike/Crowdstrike Detections_a94uw"
+                        inputRole   = "Data"
+                        stageId     = null
+                    },
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Crowdstrike/Crowdstrike Detections_jcz9t"
+                        inputRole   = "Data"
+                        stageId     = null
+                    },
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Crowdstrike/Crowdstrike Detections_dgnv2"
+                        inputRole   = "Data"
+                        stageId     = null
+                    },
+                ]
+                layout   = {
+                    cardLinks          = []
+                    dataLinks          = []
+                    dataTableViewState = {
+                        autoExpandColumnWidth       = false
+                        cellValuePresentation       = []
+                        columnOrderOverride         = []
+                        columnVisibility            = []
+                        columnWidths                = [
+                            [
+                                "ComputerName",
+                                123,
+                            ],
+                            [
+                                "Computer",
+                                157,
+                            ],
+                        ]
+                        defaultColumnWidth          = 70
+                        disableFixedLeftColumns     = false
+                        minColumnWidth              = 60
+                        preserveCellAndRowSelection = true
+                        rowHeights                  = []
+                        selection                   = {
+                            anchoredCellSelection   = [
+                                0,
+                                "Computer",
+                            ]
+                            anchoredColumnSelection = null
+                            anchoredRowSelection    = null
+                            cells                   = {
+                                Computer = {
+                                    "0" = true
+                                }
+                            }
+                            columnSelectSequence    = []
+                            columns                 = {}
+                            highlightState          = {}
+                            lastCellSelection       = null
+                            lastColumnSelection     = null
+                            lastRowSelection        = null
+                            rows                    = {}
+                            selectionType           = "cell"
+                        }
+                        tableWidth                  = 159
+                        viewType                    = "Compact"
+                    }
+                    disableOutput      = false
+                    index              = 6
+                    inputList          = [
+                        {
+                            id          = "query-input-0ofg7mum"
+                            inputName   = "Crowdstrike Detections"
+                            inputRole   = "Data"
+                            isUserInput = false
+                            parameterId = "input-parameter-bfwtdgbo"
+                        },
+                        {
+                            id          = "query-input-ffkaiy82"
+                            inputName   = "Crowdstrike/Crowdstrike Detections_a94uw"
+                            inputRole   = "Data"
+                            isUserInput = true
+                            parameterId = "input-parameter-bfwtdgbo"
+                        },
+                        {
+                            id          = "query-input-swmpew31"
+                            inputName   = "Crowdstrike/Crowdstrike Detections_jcz9t"
+                            inputRole   = "Data"
+                            isUserInput = true
+                            parameterId = "input-parameter-bfwtdgbo"
+                        },
+                        {
+                            id          = "query-input-9hvtth09"
+                            inputName   = "Crowdstrike/Crowdstrike Detections_dgnv2"
+                            inputRole   = "Data"
+                            isUserInput = true
+                            parameterId = "input-parameter-bfwtdgbo"
+                        },
+                    ]
+                    isInternal         = false
+                    label              = "Detections by Host"
+                    managers           = []
+                    queryPresentation  = {
+                        columnStats         = {
+                            histogramBucketCount = "100"
+                            needDistinctCount    = true
+                            topKCount            = "100"
+                        }
+                        initialRollupFilter = {
+                            mode = "Last"
+                        }
+                        resultKinds         = [
+                            "ResultKindSchema",
+                            "ResultKindData",
+                            "ResultKindColumnStats",
+                            "ResultKindVolumeStats",
+                            "ResultKindProgress",
+                        ]
+                        rollup              = {}
+                        sort                = [
+                            {
+                                ascending  = true
+                                columnName = "A_CrowdstrikeDetections_count"
+                            },
+                        ]
+                        volumeStats         = {
+                            bucketCount    = "100"
+                            needTotalCount = true
+                        }
+                    }
+                    serializable       = true
+                    steps              = [
+                        {
+                            customName    = "Input"
+                            customSummary = "Crowdstrike Detections"
+                            id            = "step-b0gqc3kp"
+                            index         = 0
+                            isPinned      = false
+                            opal          = []
+                            type          = "InputStep"
+                        },
+                        {
+                            customSummary = ""
+                            id            = "step-jb91brjy"
+                            index         = 1
+                            isPinned      = false
+                            opal          = [
+                                "statsby count:count(), group_by(^Computer...)",
+                            ]
+                            type          = "unknown"
+                        },
+                    ]
+                    type               = "table"
+                    viewModel          = {
+                        builderOpalTab       = "OPAL"
+                        inspectRailCollapsed = true
+                        inspectRailPinned    = false
+                        inspectRailWidth     = 640
+                        railCollapseState    = {
+                            inputsOutputs = false
+                            minimap       = false
+                            note          = true
+                            script        = true
+                        }
+                        showTimeRuler        = true
+                        stageTab             = "table"
+                        thumbnailId          = "ur6f7goi"
+                    }
+                }
+                params   = null
+                pipeline = "statsby count:count(), group_by(^Computer...)"
+            },
+            {
+                id       = "stage-62w9bzs3"
+                input    = [
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Crowdstrike Detections"
+                        inputRole   = "Data"
+                        stageId     = null
+                    },
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Crowdstrike/Crowdstrike Detections_a94uw"
+                        inputRole   = "Data"
+                        stageId     = null
+                    },
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Crowdstrike/Crowdstrike Detections_jcz9t"
+                        inputRole   = "Data"
+                        stageId     = null
+                    },
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Crowdstrike/Crowdstrike Detections_dgnv2"
+                        inputRole   = "Data"
+                        stageId     = null
+                    },
+                ]
+                layout   = {
+                    cardLinks          = []
+                    dataLinks          = []
+                    dataTableViewState = {
+                        autoExpandColumnWidth       = false
+                        cellValuePresentation       = []
+                        columnOrderOverride         = []
+                        columnVisibility            = []
+                        columnWidths                = [
+                            [
+                                "UserName",
+                                121,
+                            ],
+                        ]
+                        defaultColumnWidth          = 70
+                        disableFixedLeftColumns     = false
+                        minColumnWidth              = 60
+                        preserveCellAndRowSelection = true
+                        rowHeights                  = []
+                        selection                   = {
+                            cells                = {}
+                            columnSelectSequence = []
+                            columns              = {}
+                            highlightState       = {}
+                            rows                 = {}
+                            selectionType        = "table"
+                        }
+                        tableWidth                  = 159
+                        viewType                    = "Compact"
+                    }
+                    disableOutput      = false
+                    index              = 7
+                    inputList          = [
+                        {
+                            id          = "query-input-0ofg7mum"
+                            inputName   = "Crowdstrike Detections"
+                            inputRole   = "Data"
+                            isUserInput = false
+                            parameterId = "input-parameter-bfwtdgbo"
+                        },
+                        {
+                            id          = "query-input-ffkaiy82"
+                            inputName   = "Crowdstrike/Crowdstrike Detections_a94uw"
+                            inputRole   = "Data"
+                            isUserInput = true
+                            parameterId = "input-parameter-bfwtdgbo"
+                        },
+                        {
+                            id          = "query-input-swmpew31"
+                            inputName   = "Crowdstrike/Crowdstrike Detections_jcz9t"
+                            inputRole   = "Data"
+                            isUserInput = true
+                            parameterId = "input-parameter-bfwtdgbo"
+                        },
+                        {
+                            id          = "query-input-9hvtth09"
+                            inputName   = "Crowdstrike/Crowdstrike Detections_dgnv2"
+                            inputRole   = "Data"
+                            isUserInput = true
+                            parameterId = "input-parameter-bfwtdgbo"
+                        },
+                    ]
+                    isInternal         = false
+                    label              = "Detections by User"
+                    managers           = []
+                    queryPresentation  = {
+                        columnStats         = {
+                            histogramBucketCount = "100"
+                            needDistinctCount    = true
+                            topKCount            = "100"
+                        }
+                        initialRollupFilter = {
+                            mode = "Last"
+                        }
+                        resultKinds         = [
+                            "ResultKindSchema",
+                            "ResultKindData",
+                            "ResultKindColumnStats",
+                            "ResultKindVolumeStats",
+                            "ResultKindProgress",
+                        ]
+                        rollup              = {}
+                        sort                = [
+                            {
+                                ascending  = true
+                                columnName = "A_CrowdstrikeDetections_count"
+                            },
+                        ]
+                        volumeStats         = {
+                            bucketCount    = "100"
+                            needTotalCount = true
+                        }
+                    }
+                    serializable       = true
+                    steps              = [
+                        {
+                            customName    = "Input"
+                            customSummary = "Crowdstrike Detections"
+                            id            = "step-xgwoazpo"
+                            index         = 0
+                            isPinned      = false
+                            opal          = []
+                            type          = "InputStep"
+                        },
+                        {
+                            customSummary = ""
+                            id            = "step-cp79r1s4"
+                            index         = 1
+                            isPinned      = false
+                            opal          = [
+                                "statsby count:count(), group_by(UserName)",
+                            ]
+                            type          = "unknown"
+                        },
+                    ]
+                    type               = "table"
+                    viewModel          = {
+                        builderOpalTab       = "OPAL"
+                        inspectRailCollapsed = true
+                        inspectRailPinned    = false
+                        inspectRailWidth     = 640
+                        railCollapseState    = {
+                            inputsOutputs = false
+                            minimap       = false
+                            note          = true
+                            script        = true
+                        }
+                        showTimeRuler        = true
+                        stageTab             = "table"
+                        thumbnailId          = "2ep9c3o3"
+                    }
+                }
+                params   = null
+                pipeline = "statsby count:count(), group_by(UserName)"
+            },
+            {
+                id       = "stage-4pnno3ba"
+                input    = [
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Crowdstrike Detections"
+                        inputRole   = "Data"
+                        stageId     = null
+                    },
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Crowdstrike/Crowdstrike Detections_a94uw"
+                        inputRole   = "Data"
+                        stageId     = null
+                    },
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Crowdstrike/Crowdstrike Detections_jcz9t"
+                        inputRole   = "Data"
+                        stageId     = null
+                    },
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Crowdstrike/Crowdstrike Detections_dgnv2"
+                        inputRole   = "Data"
+                        stageId     = null
+                    },
+                ]
+                layout   = {
+                    cardLinks          = []
+                    dataLinks          = []
+                    dataTableViewState = {
+                        autoExpandColumnWidth       = false
+                        cellValuePresentation       = []
+                        columnOrderOverride         = []
+                        columnVisibility            = []
+                        columnWidths                = []
+                        defaultColumnWidth          = 70
+                        disableFixedLeftColumns     = false
+                        minColumnWidth              = 60
+                        preserveCellAndRowSelection = true
+                        rowHeights                  = []
+                        selection                   = {
+                            cells                = {}
+                            columnSelectSequence = []
+                            columns              = {}
+                            highlightState       = {}
+                            rows                 = {}
+                            selectionType        = "table"
+                        }
+                        tableWidth                  = 1208
+                        viewType                    = "Compact"
+                    }
+                    disableOutput      = false
+                    index              = 8
+                    inputList          = [
+                        {
+                            id          = "query-input-0ofg7mum"
+                            inputName   = "Crowdstrike Detections"
+                            inputRole   = "Data"
+                            isUserInput = false
+                            parameterId = "input-parameter-bfwtdgbo"
+                        },
+                        {
+                            id          = "query-input-ffkaiy82"
+                            inputName   = "Crowdstrike/Crowdstrike Detections_a94uw"
+                            inputRole   = "Data"
+                            isUserInput = true
+                            parameterId = "input-parameter-bfwtdgbo"
+                        },
+                        {
+                            id          = "query-input-swmpew31"
+                            inputName   = "Crowdstrike/Crowdstrike Detections_jcz9t"
+                            inputRole   = "Data"
+                            isUserInput = true
+                            parameterId = "input-parameter-bfwtdgbo"
+                        },
+                        {
+                            id          = "query-input-9hvtth09"
+                            inputName   = "Crowdstrike/Crowdstrike Detections_dgnv2"
+                            inputRole   = "Data"
+                            isUserInput = true
+                            parameterId = "input-parameter-bfwtdgbo"
+                        },
+                    ]
+                    isInternal         = false
+                    label              = "ParentProcess / FileName Map"
+                    managers           = [
+                        {
+                            id         = "cehc25c1"
+                            isDisabled = false
+                            type       = "Vis"
+                            vis        = {
+                                config = {
+                                    nodeLabelPlacement = "right"
+                                    nodeStyle          = "filled"
+                                    type               = "dag"
+                                }
+                                source = {
+                                    table = {
+                                        destinationField = "FileName"
+                                        sourceField      = "ParentImageFileName"
+                                        transformType    = "none"
+                                        type             = "graph"
+                                    }
+                                    type  = "table"
+                                }
+                                type   = "dag"
+                            }
+                        },
+                    ]
+                    queryPresentation  = {
+                        columnStats         = {
+                            histogramBucketCount = "100"
+                            needDistinctCount    = true
+                            topKCount            = "100"
+                        }
+                        initialRollupFilter = {
+                            mode = "Last"
+                        }
+                        resultKinds         = [
+                            "ResultKindSchema",
+                            "ResultKindData",
+                            "ResultKindColumnStats",
+                            "ResultKindVolumeStats",
+                            "ResultKindProgress",
+                        ]
+                        rollup              = {}
+                        volumeStats         = {
+                            bucketCount    = "100"
+                            needTotalCount = true
+                        }
+                        wantBuckets         = 150
+                    }
+                    serializable       = true
+                    steps              = [
+                        {
+                            customName    = "Input"
+                            customSummary = "Crowdstrike Detections"
+                            id            = "step-g8evv45z"
+                            index         = 0
+                            isPinned      = false
+                            opal          = []
+                            type          = "InputStep"
+                        },
+                        {
+                            customSummary = ""
+                            id            = "step-8p2l0kaa"
+                            index         = 1
+                            isPinned      = false
+                            opal          = [
+                                "extract_regex GrandparentImageFileName, /(?P<GrandParentProcess>[^\\\\]*$)/",
+                                "extract_regex ParentImageFileName, /(?P<ParentProcess>[^\\\\]*$)/",
+                            ]
+                            type          = "unknown"
+                        },
+                    ]
+                    type               = "table"
+                    viewModel          = {
+                        builderOpalTab       = "OPAL"
+                        inspectRailCollapsed = true
+                        inspectRailPinned    = false
+                        inspectRailWidth     = 640
+                        railCollapseState    = {
+                            inputsOutputs = false
+                            minimap       = false
+                            note          = true
+                            script        = true
+                        }
+                        showTimeRuler        = true
+                        stageTab             = "vis"
+                    }
+                }
+                params   = null
+                pipeline = <<-EOT
+                    extract_regex GrandparentImageFileName, /(?P<GrandParentProcess>[^\\]*$)/
+                    extract_regex ParentImageFileName, /(?P<ParentProcess>[^\\]*$)/
+                EOT
+            },
+        ]
+    )
+    workspace  = "o:::workspace:43784541"
+}

@@ -1,0 +1,35 @@
+filter (string(EXTRA.path) = "/crowdstrike")
+
+
+// Parse Linux timestamp into a field
+make_col timestamp:from_seconds(FIELDS._time)
+set_valid_from options(max_time_diff:duration_min(300)), timestamp
+
+
+make_col _raw:string(FIELDS._raw)
+make_col _raw:object(parse_json(_raw))
+make_col 
+    event_simpleName:string(_raw.event_simpleName),
+    event_platform:string(_raw.event_platform),
+    aid:string(_raw.aid),
+    aid2:string(_raw.AgentIdString),
+    ContextProcessId:string(_raw.ContextProcessId),
+    ParentProcessId:string(_raw.ParentProcessId),
+    TargetProcessId:string(_raw.TargetProcessId)
+
+make_col PID:coalesce(TargetProcessId, ContextProcessId)
+    
+
+pick_col
+    timestamp,
+    event_simpleName,
+    event_platform,
+    aid:coalesce(aid,aid2),
+    PID,
+    TargetProcessId,
+    ContextProcessId,
+    ParentProcessId,
+    _raw
+//set_link ^Computer, aid: @ds45996214.aid
+
+interface "log"

@@ -1,0 +1,61 @@
+filter _raw ~ Event_DetectionSummaryEvent
+
+
+make_col
+        LocalIP:string(_raw.LocalIP)
+pick_col
+    timestamp,
+    aid,
+    LocalIP,
+    UserName:string(_raw.UserName),
+    Severity:int64(_raw.Severity),
+    SeverityName:string(_raw.SeverityName),
+    Tactic:string(_raw.Tactic),
+    Technique:string(_raw.Technique),
+    AssociatedFile:string(_raw.AssociatedFile),
+    FileName:string(_raw.FileName),
+    FilePath:string(_raw.FilePath),
+    ProcessId:int64(_raw.ProcessId),
+    DetectDescription:string(_raw.DetectDescription),
+    CommandLine:string(_raw.CommandLine),
+    ParentCommandLine:string(_raw.ParentCommandLine),
+    ParentImageFileName:string(_raw.ParentImageFileName),
+    ParentProcessId:int64(_raw.ParentProcessId),
+    GrandparentCommandLine:string(_raw.GrandparentCommandLine),
+    GrandparentImageFileName:string(_raw.GrandparentImageFileName),
+    CustomerIdString:string(_raw.CustomerIdString),
+    DetectId:string(_raw.DetectId),
+    DetectName:string(_raw.DetectName),
+    DocumentsAccessed:string(_raw.DocumentsAccessed),
+    EventType:string(_raw.EventType),
+    EventUUID:string(_raw.EventUUID),
+    ExecutablesWritten:string(_raw.ExecutablesWritten),
+    ExternalApiType:string(_raw.ExternalApiType),
+    FalconHostLink:string(_raw.FalconHostLink),
+    HostGroups:string(_raw.HostGroups),
+    IOCType:string(_raw.IOCType),
+    IOCValue:string(_raw.IOCValue),
+    MACAddress:string(_raw.MACAddress),
+    MD5String:string(_raw.MD5String),
+    NetworkAccesses:object(_raw.NetworkAccesses),
+    Objective:string(_raw.Objective),
+    OriginSourceIpAddress:string(_raw.OriginSourceIpAddress),
+    PatternDispositionDescription:string(_raw.PatternDispositionDescription),
+    PatternDispositionFlags:string(_raw.PatternDispositionFlags),
+    PatternDispositionValue:int64(_raw.PatternDispositionValue),
+    PatternId:int64(_raw.PatternId),
+    ProcessEndTime:int64(_raw.ProcessEndTime),
+    ProcessStartTime:int64(_raw.ProcessStartTime),
+    QuarantineFiles:string(_raw.QuarantineFiles),
+    SHA1String:string(_raw.SHA1String),
+    SHA256String:string(_raw.SHA256String),
+    SensorId:string(_raw.SensorId),
+    UTCTimestamp:int64(_raw.UTCTimestamp),
+    cid:string(_raw.cid),
+    eid:int64(_raw.eid)
+interface "log"
+
+
+
+
+

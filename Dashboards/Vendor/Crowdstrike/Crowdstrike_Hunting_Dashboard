@@ -1,0 +1,1962 @@
+# terraform import observe_dashboard.crowdstrike_hunting 45997903
+resource "observe_dashboard" "crowdstrike_hunting" {
+    layout     = jsonencode(
+        {
+            autoPack        = true
+            gridLayout      = {
+                sections = [
+                    {
+                        card  = {
+                            cardType = "section"
+                            closed   = false
+                            title    = "Content"
+                        }
+                        items = [
+                            {
+                                card   = {
+                                    cardType    = "parameter"
+                                    parameterId = "ProcessId"
+                                }
+                                layout = {
+                                    h             = 4
+                                    resizeHandles = [
+                                        "e",
+                                        "w",
+                                    ]
+                                    w             = 4
+                                    x             = 0
+                                    y             = 0
+                                }
+                            },
+                            {
+                                card   = {
+                                    cardType    = "parameter"
+                                    parameterId = "CommandLine"
+                                }
+                                layout = {
+                                    h             = 4
+                                    resizeHandles = [
+                                        "e",
+                                        "w",
+                                    ]
+                                    w             = 4
+                                    x             = 4
+                                    y             = 0
+                                }
+                            },
+                            {
+                                card   = {
+                                    cardType    = "parameter"
+                                    parameterId = "DomainName"
+                                }
+                                layout = {
+                                    h             = 4
+                                    resizeHandles = [
+                                        "e",
+                                        "w",
+                                    ]
+                                    w             = 4
+                                    x             = 8
+                                    y             = 0
+                                }
+                            },
+                            {
+                                card   = {
+                                    cardType = "stage"
+                                    stageId  = "stage-97n9kivf"
+                                }
+                                layout = {
+                                    h = 18
+                                    w = 12
+                                    x = 0
+                                    y = 4
+                                }
+                            },
+                            {
+                                card   = {
+                                    cardType = "stage"
+                                    stageId  = "stage-ti6n2mfn"
+                                }
+                                layout = {
+                                    h = 21
+                                    w = 6
+                                    x = 6
+                                    y = 22
+                                }
+                            },
+                            {
+                                card   = {
+                                    cardType = "stage"
+                                    stageId  = "stage-m4viculn"
+                                }
+                                layout = {
+                                    h = 44
+                                    w = 6
+                                    x = 0
+                                    y = 22
+                                }
+                            },
+                            {
+                                card   = {
+                                    cardType = "stage"
+                                    stageId  = "stage-r0tfea7s"
+                                }
+                                layout = {
+                                    h = 23
+                                    w = 6
+                                    x = 6
+                                    y = 43
+                                }
+                            },
+                            {
+                                card   = {
+                                    cardType = "stage"
+                                    stageId  = "stage-atmub918"
+                                }
+                                layout = {
+                                    h = 17
+                                    w = 12
+                                    x = 0
+                                    y = 66
+                                }
+                            },
+                            {
+                                card   = {
+                                    cardType = "stage"
+                                    stageId  = "stage-rtarf0nm"
+                                }
+                                layout = {
+                                    h = 31
+                                    w = 6
+                                    x = 0
+                                    y = 83
+                                }
+                            },
+                            {
+                                card   = {
+                                    cardType = "stage"
+                                    stageId  = "stage-q28n1vrb"
+                                }
+                                layout = {
+                                    h = 31
+                                    w = 6
+                                    x = 6
+                                    y = 83
+                                }
+                            },
+                        ]
+                    },
+                ]
+            }
+            stageListLayout = {
+                isModified      = false
+                parameters      = [
+                    {
+                        allowEmpty            = true
+                        defaultValue          = {
+                            string = null
+                        }
+                        emptyValueEncoding    = "null"
+                        emptyValueLabelOption = "All Values"
+                        id                    = "ProcessId"
+                        name                  = "ProcessId"
+                        source                = "Stage"
+                        sourceColumnId        = "TargetProcessId"
+                        sourceStageId         = "stage-97n9kivf"
+                        valueKind             = {
+                            type = "STRING"
+                        }
+                        viewType              = "single-select"
+                    },
+                    {
+                        allowEmpty            = true
+                        defaultValue          = {
+                            string = ""
+                        }
+                        emptyValueEncoding    = "Empty String"
+                        emptyValueLabelOption = "null"
+                        id                    = "CommandLine"
+                        name                  = "CommandLine"
+                        valueKind             = {
+                            type = "STRING"
+                        }
+                        viewType              = "text"
+                    },
+                    {
+                        allowEmpty            = true
+                        defaultValue          = {
+                            string = ""
+                        }
+                        emptyValueEncoding    = "Empty String"
+                        emptyValueLabelOption = "null"
+                        id                    = "DomainName"
+                        name                  = "DomainName"
+                        valueKind             = {
+                            type = "STRING"
+                        }
+                        viewType              = "text"
+                    },
+                ]
+                selectedStageId = "stage-97n9kivf"
+                timeRange       = {
+                    display               = "Past 24 hours"
+                    endTime               = null
+                    millisFromCurrentTime = 86400000
+                    originalDisplay       = "Past 24 hours"
+                    startTime             = null
+                    timeRangeInfo         = {
+                        key        = "PRESETS"
+                        name       = "Presets"
+                        presetType = "PAST_24_HOURS"
+                    }
+                }
+            }
+        }
+    )
+    name       = "CrowdStrike Hunting"
+    parameters = jsonencode(
+        [
+            {
+                defaultValue = {
+                    string = null
+                }
+                id           = "ProcessId"
+                name         = "ProcessId"
+                valueKind    = {
+                    arrayItemType   = null
+                    keyForDatasetId = null
+                    type            = "STRING"
+                }
+            },
+            {
+                defaultValue = {
+                    string = ""
+                }
+                id           = "CommandLine"
+                name         = "CommandLine"
+                valueKind    = {
+                    arrayItemType   = null
+                    keyForDatasetId = null
+                    type            = "STRING"
+                }
+            },
+            {
+                defaultValue = {
+                    string = ""
+                }
+                id           = "DomainName"
+                name         = "DomainName"
+                valueKind    = {
+                    arrayItemType   = null
+                    keyForDatasetId = null
+                    type            = "STRING"
+                }
+            },
+        ]
+    )
+    stages     = jsonencode(
+        [
+            {
+                id       = "stage-97n9kivf"
+                input    = [
+                    {
+                        datasetId   = "45996237"
+                        datasetPath = null
+                        inputName   = "Crowdstrike/CrowdStrike Process Rollup Logs"
+                        inputRole   = "Data"
+                        stageId     = null
+                    },
+                    {
+                        datasetId   = "45996237"
+                        datasetPath = null
+                        inputName   = "Crowdstrike/CrowdStrike Process Rollup Logs_6ctpx"
+                        inputRole   = "Data"
+                        stageId     = null
+                    },
+                ]
+                layout   = {
+                    dataTableViewState = {
+                        cellValuePresentation       = []
+                        columnOrderOverride         = []
+                        columnVisibility            = []
+                        columnWidths                = [
+                            [
+                                "CommandLine",
+                                1178,
+                            ],
+                        ]
+                        defaultColumnWidth          = 70
+                        disableFixedLeftColumns     = false
+                        minColumnWidth              = 60
+                        preserveCellAndRowSelection = true
+                        rowHeights                  = []
+                        selection                   = {
+                            anchoredCellSelection   = [
+                                2,
+                                "CommandLine",
+                            ]
+                            anchoredColumnSelection = null
+                            anchoredRowSelection    = null
+                            cells                   = {
+                                CommandLine = {}
+                            }
+                            columnSelectSequence    = []
+                            columns                 = {}
+                            highlightState          = {}
+                            lastCellSelection       = null
+                            lastColumnSelection     = null
+                            lastRowSelection        = null
+                            rows                    = {}
+                            selectionType           = "cell"
+                        }
+                        tableWidth                  = 2338
+                        viewType                    = "Auto"
+                    }
+                    disableOutput      = false
+                    index              = 0
+                    inputList          = [
+                        {
+                            datasetId   = "45996237"
+                            id          = "query-input-y5iikvk0"
+                            inputName   = "Crowdstrike/CrowdStrike Process Rollup Logs"
+                            inputRole   = "Data"
+                            isUserInput = false
+                        },
+                        {
+                            datasetId   = "45996237"
+                            id          = "query-input-edtsh1gy"
+                            inputName   = "Crowdstrike/CrowdStrike Process Rollup Logs_6ctpx"
+                            inputRole   = "Data"
+                            isUserInput = true
+                        },
+                    ]
+                    isInternal         = false
+                    label              = "Originating Process"
+                    managers           = []
+                    queryPresentation  = {
+                        columnStats         = {
+                            histogramBucketCount = "100"
+                            needDistinctCount    = true
+                            topKCount            = "100"
+                        }
+                        initialRollupFilter = {
+                            mode = "Last"
+                        }
+                        limit               = 10000
+                        linkify             = true
+                        loadEverything      = false
+                        progressive         = true
+                        resultKinds         = [
+                            "ResultKindSchema",
+                            "ResultKindData",
+                            "ResultKindColumnStats",
+                            "ResultKindVolumeStats",
+                            "ResultKindProgress",
+                        ]
+                        rollup              = {}
+                        volumeStats         = {
+                            bucketCount    = "100"
+                            needTotalCount = true
+                        }
+                    }
+                    renderType         = "TABLE"
+                    serializable       = true
+                    steps              = [
+                        {
+                            customName    = "Input"
+                            customSummary = "Crowdstrike/CrowdStrike Process Rollup Logs"
+                            id            = "step-ltrhzd6m"
+                            index         = 0
+                            isPinned      = false
+                            opal          = []
+                            type          = "InputStep"
+                        },
+                        {
+                            action        = {
+                                params  = {
+                                    columnId         = "TargetProcessId"
+                                    columnType       = "string"
+                                    parameterFilters = [
+                                        {
+                                            parameterId = "ProcessId"
+                                        },
+                                    ]
+                                }
+                                summary = null
+                                type    = "FilterParameter"
+                            }
+                            customSummary = "ProcessId"
+                            id            = "step-1523bh74"
+                            index         = 1
+                            isPinned      = false
+                            opal          = [
+                                "filter TargetProcessId = $ProcessId or is_null($ProcessId)",
+                            ]
+                            type          = "unknown"
+                        },
+                        {
+                            customSummary = ""
+                            id            = "step-vvadzspo"
+                            index         = 2
+                            isPinned      = false
+                            opal          = [
+                                "filter search(CommandLine, $CommandLine)",
+                                "pick_col",
+                                "    timestamp,",
+                                "    aid,",
+                                "    CommandLine,",
+                                "    TargetProcessId,",
+                                "    ParentProcessId,",
+                                "    ImageFileName,",
+                                "    ParentBaseFileName",
+                                "",
+                            ]
+                            type          = "unknown"
+                        },
+                    ]
+                    type               = "table"
+                    viewModel          = {
+                        builderOpalTab       = "OPAL"
+                        inspectRailCollapsed = true
+                        inspectRailPinned    = false
+                        inspectRailWidth     = 640
+                        railCollapseState    = {
+                            inputsOutputs = false
+                            minimap       = false
+                            note          = true
+                            script        = true
+                        }
+                        showTimeRuler        = true
+                        stageOutputHeight    = 65.23781561949501
+                        stageTab             = "table"
+                        thumbnailTableData   = {
+                            rows   = [
+                                [
+                                    "1721650498193000192",
+                                    "EC2AMAZ-013ADCC",
+                                    "\"C:\\Windows\\System32\\wsqmcons.exe\"",
+                                    "254077144561",
+                                    "253422437921",
+                                    "\\Device\\HarddiskVolume1\\Windows\\System32\\wsqmcons.exe",
+                                    "svchost.exe",
+                                ],
+                                [
+                                    "1721650498193000192",
+                                    null,
+                                    "\"C:\\Windows\\System32\\wsqmcons.exe\"",
+                                    "41621343740",
+                                    "38670147924",
+                                    "\\Device\\HarddiskVolume2\\Windows\\System32\\wsqmcons.exe",
+                                    "svchost.exe",
+                                ],
+                                [
+                                    "1721650498193000192",
+                                    null,
+                                    "C:\\Windows\\System32\\wsqmcons.exe",
+                                    "71345363825",
+                                    "68735281144",
+                                    "\\Device\\HarddiskVolume2\\Windows\\System32\\wsqmcons.exe",
+                                    "svchost.exe",
+                                ],
+                                [
+                                    "1721650498191000064",
+                                    null,
+                                    "C:\\Windows\\system32\\wbem\\WmiApSrv.exe",
+                                    "41622651340",
+                                    "38665129297",
+                                    "\\Device\\HarddiskVolume2\\Windows\\System32\\wbem\\WmiApSrv.exe",
+                                    "services.exe",
+                                ],
+                                [
+                                    "1721650498191000064",
+                                    null,
+                                    "C:\\Windows\\system32\\wbem\\WmiApSrv.exe",
+                                    "41623450102",
+                                    "38665129297",
+                                    "\\Device\\HarddiskVolume2\\Windows\\System32\\wbem\\WmiApSrv.exe",
+                                    "services.exe",
+                                ],
+                                [
+                                    "1721650498188000000",
+                                    "EC2AMAZ-013ADCC",
+                                    "/k echo CSTEST",
+                                    "254078312262",
+                                    "253448515060",
+                                    "\\Device\\HarddiskVolume1\\Windows\\System32\\cmd.exe",
+                                    "CSFalconService.exe",
+                                ],
+                                [
+                                    "1721650498188000000",
+                                    null,
+                                    "\"C:\\Windows\\system32\\SearchFilterHost.exe\" 0 644 648 656 8192 652 ",
+                                    "71348244484",
+                                    "68856695210",
+                                    "\\Device\\HarddiskVolume2\\Windows\\System32\\SearchFilterHost.exe",
+                                    "SearchIndexer.exe",
+                                ],
+                                [
+                                    "1721650498188000000",
+                                    null,
+                                    "\"C:\\Windows\\system32\\SearchProtocolHost.exe\" Global\\UsGthrFltPipeMssGthrPipe94_ Global\\UsGthrCtrlFlt",
+                                    "71346300888",
+                                    "68856695210",
+                                    "\\Device\\HarddiskVolume2\\Windows\\System32\\SearchProtocolHost.exe",
+                                    "SearchIndexer.exe",
+                                ],
+                                [
+                                    "1721650498188000000",
+                                    null,
+                                    "\"C:\\Program Files\\CrowdStrike\\CSFalconService.exe\"",
+                                    "71348534818",
+                                    "68765034001",
+                                    "\\Device\\HarddiskVolume2\\Program Files\\CrowdStrike\\CSFalconService.exe",
+                                    "CSFalconService.exe",
+                                ],
+                                [
+                                    "1721650179188000000",
+                                    null,
+                                    "/usr/sbin/pkgutil --pkg-info com.avid.installer.osx.ClassicCompressorsBundleAppMan",
+                                    "565780130029539959",
+                                    "565780129991791222",
+                                    "/usr/sbin/pkgutil",
+                                    "LinkVersionChecker",
+                                ],
+                            ]
+                            schema = [
+                                {
+                                    id    = "timestamp"
+                                    type  = "timestamp"
+                                    width = 182.1
+                                },
+                                {
+                                    id    = "ComputerName"
+                                    type  = "link"
+                                    width = 135.2
+                                },
+                                {
+                                    id    = "CommandLine"
+                                    type  = "string"
+                                    width = 600
+                                },
+                                {
+                                    id    = "TargetProcessId"
+                                    type  = "string"
+                                    width = 174.20000000000002
+                                },
+                                {
+                                    id    = "ParentProcessId"
+                                    type  = "string"
+                                    width = 174.20000000000002
+                                },
+                                {
+                                    id    = "ImageFileName"
+                                    type  = "string"
+                                    width = 600
+                                },
+                                {
+                                    id    = "ParentBaseFileName"
+                                    type  = "string"
+                                    width = 182.1
+                                },
+                            ]
+                        }
+                    }
+                }
+                params   = null
+                pipeline = <<-EOT
+                    filter TargetProcessId = $ProcessId or is_null($ProcessId)
+                    filter search(CommandLine, $CommandLine)
+                    pick_col
+                        timestamp,
+                        aid,
+                        CommandLine,
+                        TargetProcessId,
+                        ParentProcessId,
+                        ImageFileName,
+                        ParentBaseFileName
+                EOT
+            },
+            {
+                id       = "stage-m4viculn"
+                input    = [
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Originating Process_-97n9"
+                        inputRole   = "Data"
+                        stageId     = "stage-97n9kivf"
+                    },
+                    {
+                        datasetId   = "45996231"
+                        datasetPath = null
+                        inputName   = "Crowdstrike/CrowdStrike DNS Logs"
+                        inputRole   = "Data"
+                        stageId     = null
+                    },
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Originating Process_-97n9_f6ypk"
+                        inputRole   = "Data"
+                        stageId     = "stage-97n9kivf"
+                    },
+                ]
+                layout   = {
+                    dataTableViewState = {
+                        cellValuePresentation       = []
+                        columnOrderOverride         = []
+                        columnVisibility            = []
+                        columnWidths                = []
+                        defaultColumnWidth          = 70
+                        disableFixedLeftColumns     = false
+                        minColumnWidth              = 60
+                        preserveCellAndRowSelection = true
+                        rowHeights                  = []
+                        selection                   = {
+                            anchoredCellSelection   = [
+                                0,
+                                "DomainName",
+                            ]
+                            anchoredColumnSelection = null
+                            anchoredRowSelection    = null
+                            cells                   = {
+                                DomainName = {}
+                            }
+                            columnSelectSequence    = []
+                            columns                 = {}
+                            highlightState          = {}
+                            lastCellSelection       = null
+                            lastColumnSelection     = null
+                            lastRowSelection        = null
+                            rows                    = {}
+                            selectionType           = "cell"
+                        }
+                        tableWidth                  = 1163
+                        viewType                    = "Auto"
+                    }
+                    disableOutput      = false
+                    index              = 1
+                    inputList          = [
+                        {
+                            id          = "query-input-ck3exr9y"
+                            inputName   = "Originating Process_-97n9"
+                            inputRole   = "Data"
+                            isUserInput = false
+                            stageId     = "stage-97n9kivf"
+                        },
+                        {
+                            datasetId   = "45996231"
+                            id          = "query-input-z937need"
+                            inputName   = "Crowdstrike/CrowdStrike DNS Logs"
+                            inputRole   = "Data"
+                            isUserInput = true
+                        },
+                        {
+                            id          = "query-input-or8l8cs6"
+                            inputName   = "Originating Process_-97n9_f6ypk"
+                            inputRole   = "Data"
+                            isUserInput = true
+                            stageId     = "stage-97n9kivf"
+                        },
+                    ]
+                    isInternal         = false
+                    label              = "Linked DNS Requests"
+                    managers           = []
+                    queryPresentation  = {
+                        initialRollupFilter = {
+                            mode = "Last"
+                        }
+                        resultKinds         = [
+                            "ResultKindSchema",
+                            "ResultKindData",
+                            "ResultKindVolumeStats",
+                            "ResultKindColumnStats",
+                            "ResultKindProgress",
+                        ]
+                        rollup              = {}
+                    }
+                    serializable       = true
+                    steps              = [
+                        {
+                            customName    = "Input"
+                            customSummary = "Originating Process_-97n9"
+                            id            = "step-v3ebnivp"
+                            index         = 0
+                            isPinned      = false
+                            opal          = []
+                            type          = "InputStep"
+                        },
+                        {
+                            customSummary = ""
+                            id            = "step-kcmee6l0"
+                            index         = 1
+                            isPinned      = false
+                            opal          = [
+                                "follow TargetProcessId = @\"Crowdstrike/CrowdStrike DNS Logs\".ContextProcessId",
+                                "filter search(DomainName, $DomainName)",
+                                "pick_col",
+                                "    timestamp,",
+                                "    ContextProcessId,",
+                                "    DomainName,",
+                                "    CNAMERecords",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                            ]
+                            type          = "unknown"
+                        },
+                    ]
+                    type               = "table"
+                    viewModel          = {
+                        builderOpalTab       = "OPAL"
+                        inspectRailCollapsed = false
+                        inspectRailPinned    = false
+                        inspectRailWidth     = 640
+                        railCollapseState    = {
+                            inputsOutputs = false
+                            minimap       = false
+                            note          = true
+                            script        = true
+                        }
+                        showTimeRuler        = true
+                        stageTab             = "table"
+                        thumbnailTableData   = {
+                            rows   = [
+                                [
+                                    "1721649545075000064",
+                                    "71339742654",
+                                    "DC1",
+                                    null,
+                                ],
+                                [
+                                    "1721649545072000000",
+                                    "254066755690",
+                                    "EC2AMAZ-013ADCC",
+                                    null,
+                                ],
+                                [
+                                    "1721649414283000064",
+                                    "565780062873490009",
+                                    "www.googleapis.com",
+                                    null,
+                                ],
+                                [
+                                    "1721647299211000064",
+                                    "565779809002754427",
+                                    "swallow-apple-com.v.aaplimg.com",
+                                    null,
+                                ],
+                                [
+                                    "1721647299208000000",
+                                    "565779809002754427",
+                                    "swallow.apple.com",
+                                    null,
+                                ],
+                                [
+                                    "1721646312828000000",
+                                    "254052889689",
+                                    "update.googleapis.com",
+                                    null,
+                                ],
+                                [
+                                    "1721645965784000000",
+                                    "254045717543",
+                                    "EC2AMAZ-013ADCC",
+                                    null,
+                                ],
+                                [
+                                    "1721645689298000128",
+                                    "71317034565",
+                                    "DC1",
+                                    null,
+                                ],
+                                [
+                                    "1721645416658999808",
+                                    "565779652465037574",
+                                    "officecdnmac.microsoft.com",
+                                    null,
+                                ],
+                                [
+                                    "1721645403301000192",
+                                    "565779652465037574",
+                                    "waws-prod-bay-045.westus.cloudapp.azure.com",
+                                    null,
+                                ],
+                            ]
+                            schema = [
+                                {
+                                    id    = "timestamp"
+                                    type  = "timestamp"
+                                    width = 182.1
+                                },
+                                {
+                                    id    = "ContextProcessId"
+                                    type  = "string"
+                                    width = 174.20000000000002
+                                },
+                                {
+                                    id    = "DomainName"
+                                    type  = "string"
+                                    width = 371.7
+                                },
+                                {
+                                    id    = "CNAMERecords"
+                                    type  = "string"
+                                    width = 135.2
+                                },
+                            ]
+                        }
+                    }
+                }
+                params   = null
+                pipeline = <<-EOT
+                    follow TargetProcessId = @"Crowdstrike/CrowdStrike DNS Logs".ContextProcessId
+                    filter search(DomainName, $DomainName)
+                    pick_col
+                        timestamp,
+                        ContextProcessId,
+                        DomainName,
+                        CNAMERecords
+                EOT
+            },
+            {
+                id       = "stage-ti6n2mfn"
+                input    = [
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Linked DNS Requests_-m4vi"
+                        inputRole   = "Data"
+                        stageId     = "stage-m4viculn"
+                    },
+                ]
+                layout   = {
+                    dataTableViewState = {
+                        cellValuePresentation       = []
+                        columnOrderOverride         = []
+                        columnVisibility            = []
+                        columnWidths                = []
+                        defaultColumnWidth          = 70
+                        disableFixedLeftColumns     = false
+                        minColumnWidth              = 60
+                        preserveCellAndRowSelection = true
+                        rowHeights                  = []
+                        selection                   = {
+                            cells                = {}
+                            columnSelectSequence = []
+                            columns              = {}
+                            highlightState       = {}
+                            rows                 = {}
+                            selectionType        = "table"
+                        }
+                        tableWidth                  = 2140
+                        viewType                    = "Auto"
+                    }
+                    disableOutput      = false
+                    index              = 2
+                    inputList          = [
+                        {
+                            id          = "query-input-zgyaxf4a"
+                            inputName   = "Linked DNS Requests_-m4vi"
+                            inputRole   = "Data"
+                            isUserInput = false
+                            stageId     = "stage-m4viculn"
+                        },
+                    ]
+                    isInternal         = false
+                    label              = "Top Domain Names"
+                    managers           = [
+                        {
+                            id         = "s7kw2z4s"
+                            isDisabled = false
+                            type       = "Vis"
+                            vis        = {
+                                config = {
+                                    innerRadius = 0.6
+                                    legend      = {
+                                        type    = "list"
+                                        visible = true
+                                    }
+                                    type        = "arc"
+                                }
+                                source = {
+                                    table = {
+                                        statsBy       = {
+                                            fn = "count"
+                                        }
+                                        timechart     = {
+                                            fn         = "count"
+                                            resolution = "SINGLE"
+                                        }
+                                        transformType = "none"
+                                        type          = "keyvalue"
+                                        valueField    = "A_CrowdStrikeDNSLogs_count"
+                                    }
+                                    topK  = {
+                                        fn    = "max"
+                                        k     = 20
+                                        order = "Top"
+                                        type  = "Custom"
+                                    }
+                                    type  = "table"
+                                }
+                                type   = "circular"
+                            }
+                        },
+                    ]
+                    queryPresentation  = {
+                        initialRollupFilter = {
+                            mode = "Last"
+                        }
+                        resultKinds         = [
+                            "ResultKindSchema",
+                            "ResultKindData",
+                            "ResultKindVolumeStats",
+                            "ResultKindColumnStats",
+                            "ResultKindProgress",
+                        ]
+                        rollup              = {}
+                        sort                = [
+                            {
+                                ascending  = false
+                                columnName = "A_CrowdStrikeDNSLogs_count"
+                            },
+                        ]
+                        wantBuckets         = 1
+                    }
+                    serializable       = true
+                    steps              = [
+                        {
+                            customName    = "Input"
+                            customSummary = "Linked DNS Requests_-m4vi"
+                            id            = "step-c2aj9mvd"
+                            index         = 0
+                            isPinned      = false
+                            opal          = []
+                            type          = "InputStep"
+                        },
+                        {
+                            action        = {
+                                params  = {
+                                    expressionList = {
+                                        aggregationMode       = "aggregate"
+                                        expressions           = [
+                                            {
+                                                dataVis              = {
+                                                    config = {
+                                                        innerRadius = 0.6
+                                                        legend      = {
+                                                            type    = "list"
+                                                            visible = true
+                                                        }
+                                                        type        = "arc"
+                                                    }
+                                                    source = {
+                                                        table = {
+                                                            statsBy       = {
+                                                                fn = "count"
+                                                            }
+                                                            timechart     = {
+                                                                fn         = "count"
+                                                                resolution = "SINGLE"
+                                                            }
+                                                            transformType = "none"
+                                                            type          = "keyvalue"
+                                                            valueField    = "A_CrowdStrikeDNSLogs_count"
+                                                        }
+                                                        topK  = {
+                                                            fn    = "max"
+                                                            k     = 20
+                                                            order = "Top"
+                                                            type  = "Custom"
+                                                        }
+                                                        type  = "table"
+                                                    }
+                                                    type   = "circular"
+                                                }
+                                                expressionIdentifier = "A"
+                                                field                = "***row***"
+                                                filterActions        = []
+                                                groupBy              = [
+                                                    "DomainName",
+                                                ]
+                                                id                   = "datasetQueryExpression-ouc56jx0"
+                                                inputSource          = {
+                                                    stageId = "stage-m4viculn"
+                                                }
+                                                invalidGroupBy       = []
+                                                lookupActions        = []
+                                                summaryFunction      = "count"
+                                                summaryMode          = "single"
+                                                topK                 = {
+                                                    fn    = "max"
+                                                    k     = 20
+                                                    order = "Top"
+                                                    type  = "Custom"
+                                                }
+                                                type                 = "datasetQueryExpression"
+                                                valueColumnId        = "A_CrowdStrikeDNSLogs_count"
+                                                viewTab              = "visualize"
+                                            },
+                                        ]
+                                        multiExpression       = {
+                                            expressionIdentifier = "A"
+                                            filterActions        = []
+                                            id                   = "multiExpression-3n41w6bn"
+                                            lookupActions        = []
+                                            type                 = "multiExpression"
+                                            viewTab              = "visualize"
+                                        }
+                                        selectedExpressionIds = [
+                                            "datasetQueryExpression-ouc56jx0",
+                                        ]
+                                        shouldLimitPatterns   = true
+                                    }
+                                }
+                                summary = null
+                                type    = "ExpressionBuilder"
+                            }
+                            customSummary = "Expression Builder"
+                            id            = "step-0jalp3ug"
+                            index         = 1
+                            isPinned      = false
+                            opal          = [
+                                "statsby A_CrowdStrikeDNSLogs_count:count(), group_by(DomainName)",
+                                "topk 20, max(A_CrowdStrikeDNSLogs_count)",
+                            ]
+                            type          = "unknown"
+                        },
+                    ]
+                    type               = "table"
+                    viewModel          = {
+                        builderOpalTab       = "OPAL"
+                        inspectRailCollapsed = true
+                        inspectRailPinned    = false
+                        inspectRailWidth     = 640
+                        railCollapseState    = {
+                            inputsOutputs = false
+                            minimap       = false
+                            note          = true
+                            script        = true
+                        }
+                        showTimeRuler        = true
+                        stageTab             = "vis"
+                        thumbnailVisUri      = "data:image/png;base64,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"
+                    }
+                }
+                params   = null
+                pipeline = <<-EOT
+                    statsby A_CrowdStrikeDNSLogs_count:count(), group_by(DomainName)
+                    topk 20, max(A_CrowdStrikeDNSLogs_count)
+                EOT
+            },
+            {
+                id       = "stage-r0tfea7s"
+                input    = [
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Linked DNS Requests_-m4vi"
+                        inputRole   = "Data"
+                        stageId     = "stage-m4viculn"
+                    },
+                ]
+                layout   = {
+                    dataTableViewState = {
+                        cellValuePresentation       = []
+                        columnOrderOverride         = []
+                        columnVisibility            = []
+                        columnWidths                = []
+                        defaultColumnWidth          = 70
+                        disableFixedLeftColumns     = false
+                        minColumnWidth              = 60
+                        preserveCellAndRowSelection = true
+                        rowHeights                  = []
+                        selection                   = {
+                            cells                = {}
+                            columnSelectSequence = []
+                            columns              = {}
+                            highlightState       = {}
+                            rows                 = {}
+                            selectionType        = "table"
+                        }
+                        tableWidth                  = 1308
+                        viewType                    = "Auto"
+                    }
+                    disableOutput      = false
+                    index              = 3
+                    inputList          = [
+                        {
+                            id          = "query-input-zgyaxf4a"
+                            inputName   = "Linked DNS Requests_-m4vi"
+                            inputRole   = "Data"
+                            isUserInput = false
+                            stageId     = "stage-m4viculn"
+                        },
+                    ]
+                    isInternal         = false
+                    label              = "Bottom Domain Names"
+                    managers           = [
+                        {
+                            id         = "j7u0htdr"
+                            isDisabled = false
+                            type       = "Vis"
+                            vis        = {
+                                config = {
+                                    innerRadius = 0.6
+                                    legend      = {
+                                        type    = "list"
+                                        visible = true
+                                    }
+                                    type        = "arc"
+                                }
+                                source = {
+                                    table = {
+                                        statsBy       = {
+                                            fn = "count"
+                                        }
+                                        timechart     = {
+                                            fn         = "count"
+                                            resolution = "SINGLE"
+                                        }
+                                        transformType = "none"
+                                        type          = "keyvalue"
+                                        valueField    = "A_CrowdStrikeDNSLogs_count"
+                                    }
+                                    topK  = {
+                                        fn    = "max"
+                                        k     = 20
+                                        order = "Bottom"
+                                        type  = "Custom"
+                                    }
+                                    type  = "table"
+                                }
+                                type   = "circular"
+                            }
+                        },
+                    ]
+                    queryPresentation  = {
+                        initialRollupFilter = {
+                            mode = "Last"
+                        }
+                        resultKinds         = [
+                            "ResultKindSchema",
+                            "ResultKindData",
+                            "ResultKindVolumeStats",
+                            "ResultKindColumnStats",
+                            "ResultKindProgress",
+                        ]
+                        rollup              = {}
+                        sort                = [
+                            {
+                                ascending  = false
+                                columnName = "A_CrowdStrikeDNSLogs_count"
+                            },
+                        ]
+                        wantBuckets         = 1
+                    }
+                    serializable       = true
+                    steps              = [
+                        {
+                            customName    = "Input"
+                            customSummary = "Linked DNS Requests_-m4vi"
+                            id            = "step-pv0zq5r9"
+                            index         = 0
+                            isPinned      = false
+                            opal          = []
+                            type          = "InputStep"
+                        },
+                        {
+                            action        = {
+                                params  = {
+                                    expressionList = {
+                                        aggregationMode       = "aggregate"
+                                        expressions           = [
+                                            {
+                                                dataVis              = {
+                                                    config = {
+                                                        innerRadius = 0.6
+                                                        legend      = {
+                                                            type    = "list"
+                                                            visible = true
+                                                        }
+                                                        type        = "arc"
+                                                    }
+                                                    source = {
+                                                        table = {
+                                                            statsBy       = {
+                                                                fn = "count"
+                                                            }
+                                                            timechart     = {
+                                                                fn         = "count"
+                                                                resolution = "SINGLE"
+                                                            }
+                                                            transformType = "none"
+                                                            type          = "keyvalue"
+                                                            valueField    = "A_CrowdStrikeDNSLogs_count"
+                                                        }
+                                                        topK  = {
+                                                            fn    = "max"
+                                                            k     = 20
+                                                            order = "Bottom"
+                                                            type  = "Custom"
+                                                        }
+                                                        type  = "table"
+                                                    }
+                                                    type   = "circular"
+                                                }
+                                                expressionIdentifier = "A"
+                                                field                = "***row***"
+                                                filterActions        = []
+                                                groupBy              = [
+                                                    "DomainName",
+                                                ]
+                                                id                   = "datasetQueryExpression-ouc56jx0"
+                                                inputSource          = {
+                                                    stageId = "stage-m4viculn"
+                                                }
+                                                invalidGroupBy       = []
+                                                lookupActions        = []
+                                                summaryFunction      = "count"
+                                                summaryMode          = "single"
+                                                topK                 = {
+                                                    fn    = "max"
+                                                    k     = 20
+                                                    order = "Bottom"
+                                                    type  = "Custom"
+                                                }
+                                                type                 = "datasetQueryExpression"
+                                                valueColumnId        = "A_CrowdStrikeDNSLogs_count"
+                                                viewTab              = "visualize"
+                                            },
+                                        ]
+                                        multiExpression       = {
+                                            expressionIdentifier = "A"
+                                            filterActions        = []
+                                            id                   = "multiExpression-3n41w6bn"
+                                            lookupActions        = []
+                                            type                 = "multiExpression"
+                                            viewTab              = "visualize"
+                                        }
+                                        selectedExpressionIds = [
+                                            "datasetQueryExpression-ouc56jx0",
+                                        ]
+                                        shouldLimitPatterns   = true
+                                    }
+                                }
+                                summary = null
+                                type    = "ExpressionBuilder"
+                            }
+                            customSummary = "Expression Builder"
+                            id            = "step-iqg7ayo5"
+                            index         = 1
+                            isPinned      = false
+                            opal          = [
+                                "statsby A_CrowdStrikeDNSLogs_count:count(), group_by(DomainName)",
+                                "bottomk 20, max(A_CrowdStrikeDNSLogs_count)",
+                            ]
+                            type          = "unknown"
+                        },
+                    ]
+                    type               = "table"
+                    viewModel          = {
+                        inspectRailCollapsed = true
+                        inspectRailPinned    = false
+                        inspectRailWidth     = 640
+                        railCollapseState    = {
+                            inputsOutputs = false
+                            minimap       = false
+                            note          = true
+                            script        = true
+                        }
+                        showTimeRuler        = true
+                        stageTab             = "vis"
+                        thumbnailVisUri      = "data:image/png;base64,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"
+                    }
+                }
+                params   = null
+                pipeline = <<-EOT
+                    statsby A_CrowdStrikeDNSLogs_count:count(), group_by(DomainName)
+                    bottomk 20, max(A_CrowdStrikeDNSLogs_count)
+                EOT
+            },
+            {
+                id       = "stage-atmub918"
+                input    = [
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Linked DNS Requests_-m4vi"
+                        inputRole   = "Data"
+                        stageId     = "stage-m4viculn"
+                    },
+                    {
+                        datasetId   = "45996237"
+                        datasetPath = null
+                        inputName   = "Crowdstrike/CrowdStrike Process Rollup Logs"
+                        inputRole   = "Data"
+                        stageId     = null
+                    },
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Linked DNS Requests_-m4vi_gtzm9"
+                        inputRole   = "Data"
+                        stageId     = "stage-m4viculn"
+                    },
+                ]
+                layout   = {
+                    dataTableViewState = {
+                        cellValuePresentation       = []
+                        columnOrderOverride         = []
+                        columnVisibility            = []
+                        columnWidths                = []
+                        defaultColumnWidth          = 70
+                        disableFixedLeftColumns     = false
+                        minColumnWidth              = 60
+                        preserveCellAndRowSelection = true
+                        rowHeights                  = []
+                        selection                   = {
+                            cells                = {}
+                            columnSelectSequence = []
+                            columns              = {}
+                            highlightState       = {}
+                            rows                 = {}
+                            selectionType        = "table"
+                        }
+                        tableWidth                  = 2338
+                        viewType                    = "Auto"
+                    }
+                    disableOutput      = false
+                    index              = 4
+                    inputList          = [
+                        {
+                            id          = "query-input-zgyaxf4a"
+                            inputName   = "Linked DNS Requests_-m4vi"
+                            inputRole   = "Data"
+                            isUserInput = false
+                            stageId     = "stage-m4viculn"
+                        },
+                        {
+                            datasetId   = "45996237"
+                            id          = "query-input-jgggr5n8"
+                            inputName   = "Crowdstrike/CrowdStrike Process Rollup Logs"
+                            inputRole   = "Data"
+                            isUserInput = true
+                        },
+                        {
+                            id          = "query-input-6pjw3gvk"
+                            inputName   = "Linked DNS Requests_-m4vi_gtzm9"
+                            inputRole   = "Data"
+                            isUserInput = true
+                            stageId     = "stage-m4viculn"
+                        },
+                    ]
+                    isInternal         = false
+                    label              = "Origin Process Connecting to Domain"
+                    managers           = []
+                    queryPresentation  = {
+                        initialRollupFilter = {
+                            mode = "Last"
+                        }
+                        resultKinds         = [
+                            "ResultKindSchema",
+                            "ResultKindData",
+                            "ResultKindVolumeStats",
+                            "ResultKindColumnStats",
+                            "ResultKindProgress",
+                        ]
+                        rollup              = {}
+                        sort                = [
+                            {
+                                ascending  = false
+                                columnName = "A_CrowdStrikeDNSLogs_count"
+                            },
+                        ]
+                    }
+                    serializable       = true
+                    steps              = [
+                        {
+                            customName    = "Input"
+                            customSummary = "Linked DNS Requests_-m4vi"
+                            id            = "step-08a472x2"
+                            index         = 0
+                            isPinned      = false
+                            opal          = []
+                            type          = "InputStep"
+                        },
+                        {
+                            customSummary = ""
+                            id            = "step-bgb7hqzl"
+                            index         = 1
+                            isPinned      = false
+                            opal          = [
+                                "follow ContextProcessId =@\"Crowdstrike/CrowdStrike Process Rollup Logs\".TargetProcessId",
+                                "",
+                                "",
+                                "pick_col",
+                                "    timestamp,",
+                                "    aid,",
+                                "    CommandLine,",
+                                "    TargetProcessId,",
+                                "    ParentProcessId,",
+                                "    ImageFileName,",
+                                "    ParentBaseFileName",
+                            ]
+                            type          = "unknown"
+                        },
+                    ]
+                    type               = "table"
+                    viewModel          = {
+                        builderOpalTab       = "OPAL"
+                        inspectRailCollapsed = true
+                        inspectRailPinned    = false
+                        inspectRailWidth     = 640
+                        railCollapseState    = {
+                            inputsOutputs = false
+                            minimap       = false
+                            note          = true
+                            script        = true
+                        }
+                        showTimeRuler        = true
+                        stageTab             = "table"
+                        thumbnailTableData   = {
+                            rows   = [
+                                [
+                                    "1721650179062000128",
+                                    null,
+                                    "/System/Library/Frameworks/AddressBook.framework/Versions/A/Helpers/AddressBookSourceSync.app/Conten",
+                                    "565780062873490009",
+                                    "565148114461901500",
+                                    "/System/Library/Frameworks/AddressBook.framework/Versions/A/Helpers/AddressBookSourceSync.app/Conten",
+                                    "launchd",
+                                ],
+                                [
+                                    "1721649856164000000",
+                                    "EC2AMAZ-013ADCC",
+                                    "C:\\Windows\\system32\\wbem\\wmiprvse.exe -secured -Embedding",
+                                    "254066755690",
+                                    "253415943000",
+                                    "\\Device\\HarddiskVolume1\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+                                    "svchost.exe",
+                                ],
+                                [
+                                    "1721649545075000064",
+                                    null,
+                                    "C:\\Windows\\system32\\wbem\\wmiprvse.exe -secured -Embedding",
+                                    "71339742654",
+                                    "68732648743",
+                                    "\\Device\\HarddiskVolume2\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+                                    "svchost.exe",
+                                ],
+                                [
+                                    "1721647929332999936",
+                                    null,
+                                    "/System/Library/PrivateFrameworks/CoreParsec.framework/parsec-fbf",
+                                    "565779809002754427",
+                                    "565148114461901500",
+                                    "/System/Library/PrivateFrameworks/CoreParsec.framework/parsec-fbf",
+                                    "launchd",
+                                ],
+                                [
+                                    "1721646312823000064",
+                                    "EC2AMAZ-013ADCC",
+                                    "\"C:\\Program Files (x86)\\Google\\GoogleUpdater\\128.0.6597.0\\updater.exe\" --system --windows-service --",
+                                    "254052889689",
+                                    "253414602798",
+                                    "\\Device\\HarddiskVolume1\\Program Files (x86)\\Google\\GoogleUpdater\\128.0.6597.0\\updater.exe",
+                                    "services.exe",
+                                ],
+                                [
+                                    "1721645965801000192",
+                                    null,
+                                    "/System/Library/Frameworks/AddressBook.framework/Versions/A/Helpers/AddressBookSourceSync.app/Conten",
+                                    "565779536921399441",
+                                    "565148114461901500",
+                                    "/System/Library/Frameworks/AddressBook.framework/Versions/A/Helpers/AddressBookSourceSync.app/Conten",
+                                    "launchd",
+                                ],
+                                [
+                                    "1721645965800000000",
+                                    "EC2AMAZ-013ADCC",
+                                    "C:\\Windows\\system32\\wbem\\wmiprvse.exe -secured -Embedding",
+                                    "254045717543",
+                                    "253415943000",
+                                    "\\Device\\HarddiskVolume1\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+                                    "svchost.exe",
+                                ],
+                                [
+                                    "1721645965783000064",
+                                    null,
+                                    "/Library/Application Support/Microsoft/MAU2.0/Microsoft AutoUpdate.app/Contents/MacOS/Microsoft Upda",
+                                    "565779652465037574",
+                                    "565148114461901500",
+                                    "/Library/Application Support/Microsoft/MAU2.0/Microsoft AutoUpdate.app/Contents/MacOS/Microsoft Upda",
+                                    "launchd",
+                                ],
+                                [
+                                    "1721645965780000000",
+                                    null,
+                                    "/usr/bin/codesign -v /Library/PrivilegedHelperTools/com.microsoft.autoupdate.helper",
+                                    "565779652740813065",
+                                    "565779652465037574",
+                                    "/usr/bin/codesign",
+                                    "Microsoft Update Assistant",
+                                ],
+                                [
+                                    "1721645689298000128",
+                                    null,
+                                    "C:\\Windows\\system32\\wbem\\wmiprvse.exe -secured -Embedding",
+                                    "71317034565",
+                                    "68732648743",
+                                    "\\Device\\HarddiskVolume2\\Windows\\System32\\wbem\\WmiPrvSE.exe",
+                                    "svchost.exe",
+                                ],
+                            ]
+                            schema = [
+                                {
+                                    id    = "timestamp"
+                                    type  = "timestamp"
+                                    width = 182.1
+                                },
+                                {
+                                    id    = "ComputerName"
+                                    type  = "link"
+                                    width = 135.2
+                                },
+                                {
+                                    id    = "CommandLine"
+                                    type  = "string"
+                                    width = 600
+                                },
+                                {
+                                    id    = "TargetProcessId"
+                                    type  = "string"
+                                    width = 174.20000000000002
+                                },
+                                {
+                                    id    = "ParentProcessId"
+                                    type  = "string"
+                                    width = 174.20000000000002
+                                },
+                                {
+                                    id    = "ImageFileName"
+                                    type  = "string"
+                                    width = 600
+                                },
+                                {
+                                    id    = "ParentBaseFileName"
+                                    type  = "string"
+                                    width = 237.4
+                                },
+                            ]
+                        }
+                    }
+                }
+                params   = null
+                pipeline = <<-EOT
+                    follow ContextProcessId =@"Crowdstrike/CrowdStrike Process Rollup Logs".TargetProcessId
+                    
+                    
+                    pick_col
+                        timestamp,
+                        aid,
+                        CommandLine,
+                        TargetProcessId,
+                        ParentProcessId,
+                        ImageFileName,
+                        ParentBaseFileName
+                EOT
+            },
+            {
+                id       = "stage-rtarf0nm"
+                input    = [
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Linked DNS Requests_-m4vi"
+                        inputRole   = "Data"
+                        stageId     = "stage-m4viculn"
+                    },
+                    {
+                        datasetId   = "45996237"
+                        datasetPath = null
+                        inputName   = "Crowdstrike/CrowdStrike Process Rollup Logs"
+                        inputRole   = "Data"
+                        stageId     = null
+                    },
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Linked DNS Requests_-m4vi_gtzm9"
+                        inputRole   = "Data"
+                        stageId     = "stage-m4viculn"
+                    },
+                ]
+                layout   = {
+                    dataTableViewState = {
+                        cellValuePresentation       = []
+                        columnOrderOverride         = []
+                        columnVisibility            = []
+                        columnWidths                = []
+                        defaultColumnWidth          = 70
+                        disableFixedLeftColumns     = false
+                        minColumnWidth              = 60
+                        preserveCellAndRowSelection = true
+                        rowHeights                  = []
+                        selection                   = {
+                            cells                = {}
+                            columnSelectSequence = []
+                            columns              = {}
+                            highlightState       = {}
+                            rows                 = {}
+                            selectionType        = "table"
+                        }
+                        tableWidth                  = 2140
+                        viewType                    = "Auto"
+                    }
+                    disableOutput      = false
+                    index              = 5
+                    inputList          = [
+                        {
+                            id          = "query-input-zgyaxf4a"
+                            inputName   = "Linked DNS Requests_-m4vi"
+                            inputRole   = "Data"
+                            isUserInput = false
+                            stageId     = "stage-m4viculn"
+                        },
+                        {
+                            datasetId   = "45996237"
+                            id          = "query-input-jgggr5n8"
+                            inputName   = "Crowdstrike/CrowdStrike Process Rollup Logs"
+                            inputRole   = "Data"
+                            isUserInput = true
+                        },
+                        {
+                            id          = "query-input-6pjw3gvk"
+                            inputName   = "Linked DNS Requests_-m4vi_gtzm9"
+                            inputRole   = "Data"
+                            isUserInput = true
+                            stageId     = "stage-m4viculn"
+                        },
+                    ]
+                    isInternal         = false
+                    label              = "CommandLine to DomainName"
+                    managers           = [
+                        {
+                            id         = "cdrm6lhc"
+                            isDisabled = false
+                            type       = "Vis"
+                            vis        = {
+                                config = {
+                                    disableDrag              = false
+                                    disableForcesAfterLayout = false
+                                    edgeCurveType            = "Curve"
+                                    gridSize                 = 50
+                                    nodeLabelPlacement       = "right"
+                                    nodeStyle                = "filled"
+                                    showArrows               = true
+                                    type                     = "force_displacement"
+                                    useGrid                  = true
+                                }
+                                source = {
+                                    table = {
+                                        destinationField = "DomainName"
+                                        sourceField      = "CommandLine"
+                                        transformType    = "none"
+                                        type             = "graph"
+                                    }
+                                    type  = "table"
+                                }
+                                type   = "force_displacement"
+                            }
+                        },
+                    ]
+                    queryPresentation  = {
+                        initialRollupFilter = {
+                            mode = "Last"
+                        }
+                        resultKinds         = [
+                            "ResultKindSchema",
+                            "ResultKindData",
+                            "ResultKindVolumeStats",
+                            "ResultKindColumnStats",
+                            "ResultKindProgress",
+                        ]
+                        rollup              = {}
+                        sort                = [
+                            {
+                                ascending  = false
+                                columnName = "A_CrowdStrikeDNSLogs_count"
+                            },
+                        ]
+                        wantBuckets         = 250
+                    }
+                    serializable       = true
+                    steps              = [
+                        {
+                            customName    = "Input"
+                            customSummary = "Linked DNS Requests_-m4vi"
+                            id            = "step-yg5uuino"
+                            index         = 0
+                            isPinned      = false
+                            opal          = []
+                            type          = "InputStep"
+                        },
+                        {
+                            customSummary = ""
+                            id            = "step-u6u4lthc"
+                            index         = 1
+                            isPinned      = false
+                            opal          = [
+                                "follow ContextProcessId =@\"Crowdstrike/CrowdStrike Process Rollup Logs\".TargetProcessId",
+                                "",
+                                "join on(TargetProcessId=@\"Linked DNS Requests_-m4vi\".ContextProcessId, frame(back:24h,ahead:24h)), DomainName:@\"Linked DNS Requests_-m4vi\".DomainName",
+                                "",
+                                "pick_col",
+                                "    timestamp,",
+                                "    aid,",
+                                "    CommandLine,",
+                                "    TargetProcessId,",
+                                "    ParentProcessId,",
+                                "    ImageFileName,",
+                                "    ParentBaseFileName,",
+                                "    DomainName",
+                            ]
+                            type          = "unknown"
+                        },
+                    ]
+                    type               = "table"
+                    viewModel          = {
+                        builderOpalTab       = "OPAL"
+                        inspectRailCollapsed = true
+                        inspectRailPinned    = false
+                        inspectRailWidth     = 640
+                        railCollapseState    = {
+                            inputsOutputs = false
+                            minimap       = false
+                            note          = true
+                            script        = true
+                        }
+                        showTimeRuler        = true
+                        stageTab             = "vis"
+                    }
+                }
+                params   = null
+                pipeline = <<-EOT
+                    follow ContextProcessId =@"Crowdstrike/CrowdStrike Process Rollup Logs".TargetProcessId
+                    
+                    join on(TargetProcessId=@"Linked DNS Requests_-m4vi".ContextProcessId, frame(back:24h,ahead:24h)), DomainName:@"Linked DNS Requests_-m4vi".DomainName
+                    
+                    pick_col
+                        timestamp,
+                        aid,
+                        CommandLine,
+                        TargetProcessId,
+                        ParentProcessId,
+                        ImageFileName,
+                        ParentBaseFileName,
+                        DomainName
+                EOT
+            },
+            {
+                id       = "stage-q28n1vrb"
+                input    = [
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Linked DNS Requests_-m4vi"
+                        inputRole   = "Data"
+                        stageId     = "stage-m4viculn"
+                    },
+                    {
+                        datasetId   = "45996237"
+                        datasetPath = null
+                        inputName   = "Crowdstrike/CrowdStrike Process Rollup Logs"
+                        inputRole   = "Data"
+                        stageId     = null
+                    },
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Linked DNS Requests_-m4vi_gtzm9"
+                        inputRole   = "Data"
+                        stageId     = "stage-m4viculn"
+                    },
+                ]
+                layout   = {
+                    dataTableViewState = {
+                        cellValuePresentation       = []
+                        columnOrderOverride         = []
+                        columnVisibility            = []
+                        columnWidths                = []
+                        defaultColumnWidth          = 70
+                        disableFixedLeftColumns     = false
+                        minColumnWidth              = 60
+                        preserveCellAndRowSelection = true
+                        rowHeights                  = []
+                        selection                   = {
+                            cells                = {}
+                            columnSelectSequence = []
+                            columns              = {}
+                            highlightState       = {}
+                            rows                 = {}
+                            selectionType        = "table"
+                        }
+                        tableWidth                  = 2140
+                        viewType                    = "Auto"
+                    }
+                    disableOutput      = false
+                    index              = 6
+                    inputList          = [
+                        {
+                            id          = "query-input-zgyaxf4a"
+                            inputName   = "Linked DNS Requests_-m4vi"
+                            inputRole   = "Data"
+                            isUserInput = false
+                            stageId     = "stage-m4viculn"
+                        },
+                        {
+                            datasetId   = "45996237"
+                            id          = "query-input-jgggr5n8"
+                            inputName   = "Crowdstrike/CrowdStrike Process Rollup Logs"
+                            inputRole   = "Data"
+                            isUserInput = true
+                        },
+                        {
+                            id          = "query-input-6pjw3gvk"
+                            inputName   = "Linked DNS Requests_-m4vi_gtzm9"
+                            inputRole   = "Data"
+                            isUserInput = true
+                            stageId     = "stage-m4viculn"
+                        },
+                    ]
+                    isInternal         = false
+                    label              = "ParentFileName to DomainName"
+                    managers           = [
+                        {
+                            id         = "u9z04o0k"
+                            isDisabled = false
+                            type       = "Vis"
+                            vis        = {
+                                config = {
+                                    disableDrag              = false
+                                    disableForcesAfterLayout = false
+                                    edgeCurveType            = "Curve"
+                                    gridSize                 = 50
+                                    nodeLabelPlacement       = "right"
+                                    nodeStyle                = "filled"
+                                    showArrows               = true
+                                    type                     = "force_displacement"
+                                    useGrid                  = true
+                                }
+                                source = {
+                                    table = {
+                                        destinationField = "DomainName"
+                                        sourceField      = "ParentBaseFileName"
+                                        transformType    = "none"
+                                        type             = "graph"
+                                    }
+                                    type  = "table"
+                                }
+                                type   = "force_displacement"
+                            }
+                        },
+                    ]
+                    queryPresentation  = {
+                        initialRollupFilter = {
+                            mode = "Last"
+                        }
+                        resultKinds         = [
+                            "ResultKindSchema",
+                            "ResultKindData",
+                            "ResultKindVolumeStats",
+                            "ResultKindColumnStats",
+                            "ResultKindProgress",
+                        ]
+                        rollup              = {}
+                        sort                = [
+                            {
+                                ascending  = false
+                                columnName = "A_CrowdStrikeDNSLogs_count"
+                            },
+                        ]
+                        wantBuckets         = 250
+                    }
+                    selectedStepId     = "step-iweny27g"
+                    serializable       = true
+                    steps              = [
+                        {
+                            customName    = "Input"
+                            customSummary = "Linked DNS Requests_-m4vi"
+                            id            = "step-6nvpktg9"
+                            index         = 0
+                            isPinned      = false
+                            opal          = []
+                            type          = "InputStep"
+                        },
+                        {
+                            customSummary = ""
+                            id            = "step-iweny27g"
+                            index         = 1
+                            isPinned      = false
+                            opal          = [
+                                "follow ContextProcessId =@\"Crowdstrike/CrowdStrike Process Rollup Logs\".TargetProcessId",
+                                "",
+                                "join on(TargetProcessId=@\"Linked DNS Requests_-m4vi\".ContextProcessId, frame(back:24h,ahead:24h)), DomainName:@\"Linked DNS Requests_-m4vi\".DomainName",
+                                "",
+                                "pick_col",
+                                "    timestamp,",
+                                "    aid,",
+                                "    CommandLine,",
+                                "    TargetProcessId,",
+                                "    ParentProcessId,",
+                                "    ImageFileName,",
+                                "    ParentBaseFileName,",
+                                "    DomainName",
+                            ]
+                            type          = "unknown"
+                        },
+                    ]
+                    type               = "table"
+                    viewModel          = {
+                        builderOpalTab       = "OPAL"
+                        inspectRailCollapsed = true
+                        inspectRailPinned    = false
+                        inspectRailWidth     = 640
+                        railCollapseState    = {
+                            inputsOutputs = false
+                            minimap       = false
+                            note          = true
+                            script        = true
+                        }
+                        showTimeRuler        = true
+                        stageTab             = "vis"
+                    }
+                }
+                params   = null
+                pipeline = <<-EOT
+                    follow ContextProcessId =@"Crowdstrike/CrowdStrike Process Rollup Logs".TargetProcessId
+                    
+                    join on(TargetProcessId=@"Linked DNS Requests_-m4vi".ContextProcessId, frame(back:24h,ahead:24h)), DomainName:@"Linked DNS Requests_-m4vi".DomainName
+                    
+                    pick_col
+                        timestamp,
+                        aid,
+                        CommandLine,
+                        TargetProcessId,
+                        ParentProcessId,
+                        ImageFileName,
+                        ParentBaseFileName,
+                        DomainName
+                EOT
+            },
+        ]
+    )
+    workspace  = "o:::workspace:43784541"
+}

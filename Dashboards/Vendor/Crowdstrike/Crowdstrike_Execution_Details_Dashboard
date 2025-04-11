@@ -1,0 +1,2142 @@
+# terraform import observe_dashboard.crowdstrike_execution_details 48831004
+resource "observe_dashboard" "crowdstrike_execution_details" {
+    layout     = jsonencode(
+        {
+            autoPack        = true
+            gridLayout      = {
+                sections = [
+                    {
+                        card  = {
+                            cardType = "section"
+                            closed   = false
+                            title    = "Dashboard content"
+                        }
+                        items = [
+                            {
+                                card   = {
+                                    cardType    = "parameter"
+                                    parameterId = "CommandLine"
+                                }
+                                layout = {
+                                    h             = 4
+                                    resizeHandles = [
+                                        "e",
+                                        "w",
+                                    ]
+                                    w             = 3
+                                    x             = 4
+                                    y             = 0
+                                }
+                            },
+                            {
+                                card   = {
+                                    cardType    = "parameter"
+                                    parameterId = "DomainName"
+                                }
+                                layout = {
+                                    h             = 4
+                                    resizeHandles = [
+                                        "e",
+                                        "w",
+                                    ]
+                                    w             = 3
+                                    x             = 7
+                                    y             = 0
+                                }
+                            },
+                            {
+                                card   = {
+                                    cardType    = "parameter"
+                                    parameterId = "AlertProcessID"
+                                }
+                                layout = {
+                                    h             = 4
+                                    resizeHandles = [
+                                        "e",
+                                        "w",
+                                    ]
+                                    w             = 4
+                                    x             = 0
+                                    y             = 0
+                                }
+                            },
+                            {
+                                card   = {
+                                    cardType = "stage"
+                                    stageId  = "stage-059q1wzv"
+                                }
+                                layout = {
+                                    h = 20
+                                    w = 7
+                                    x = 0
+                                    y = 4
+                                }
+                            },
+                            {
+                                card   = {
+                                    cardType = "stage"
+                                    stageId  = "stage-sb45l1fy"
+                                }
+                                layout = {
+                                    h = 12
+                                    w = 5
+                                    x = 7
+                                    y = 4
+                                }
+                            },
+                            {
+                                card   = {
+                                    cardType = "stage"
+                                    stageId  = "stage-lp4d6xw2"
+                                }
+                                layout = {
+                                    h = 27
+                                    w = 5
+                                    x = 7
+                                    y = 16
+                                }
+                            },
+                            {
+                                card   = {
+                                    cardType = "stage"
+                                    stageId  = "stage-0debo49r"
+                                }
+                                layout = {
+                                    h = 19
+                                    w = 7
+                                    x = 0
+                                    y = 24
+                                }
+                            },
+                            {
+                                card   = {
+                                    cardType = "stage"
+                                    stageId  = "stage-lu62uzjo"
+                                }
+                                layout = {
+                                    h = 19
+                                    w = 6
+                                    x = 0
+                                    y = 43
+                                }
+                            },
+                            {
+                                card   = {
+                                    cardType = "stage"
+                                    stageId  = "stage-btinv4yd"
+                                }
+                                layout = {
+                                    h = 19
+                                    w = 6
+                                    x = 6
+                                    y = 43
+                                }
+                            },
+                            {
+                                card   = {
+                                    cardType = "stage"
+                                    stageId  = "stage-tsi7ga9g"
+                                }
+                                layout = {
+                                    h = 19
+                                    w = 6
+                                    x = 0
+                                    y = 62
+                                }
+                            },
+                            {
+                                card   = {
+                                    cardType = "stage"
+                                    stageId  = "stage-bbvyst9n"
+                                }
+                                layout = {
+                                    h = 19
+                                    w = 6
+                                    x = 6
+                                    y = 62
+                                }
+                            },
+                            {
+                                card   = {
+                                    cardType = "stage"
+                                    stageId  = "stage-fzv27j2h"
+                                }
+                                layout = {
+                                    h = 23
+                                    w = 12
+                                    x = 0
+                                    y = 81
+                                }
+                            },
+                            {
+                                card   = {
+                                    cardType = "stage"
+                                    stageId  = "stage-nr0i57gu"
+                                }
+                                layout = {
+                                    h = 54
+                                    w = 12
+                                    x = 0
+                                    y = 104
+                                }
+                            },
+                        ]
+                    },
+                ]
+            }
+            stageListLayout = {
+                isModified      = false
+                parameters      = [
+                    {
+                        autoApply             = true
+                        datasetId             = "45996199"
+                        defaultValue          = {
+                            datasetref = {
+                                datasetId = "45996199"
+                            }
+                        }
+                        emptyValueEncoding    = "null"
+                        emptyValueLabelOption = "null"
+                        filterActions         = []
+                        id                    = "input-parameter-5407fumu"
+                        name                  = "Crowdstrike FDR Logs"
+                        preFilterActions      = []
+                        valueKind             = {
+                            type = "DATASETREF"
+                        }
+                        viewType              = "input"
+                    },
+                    {
+                        allowEmpty            = true
+                        defaultValue          = {
+                            string = ""
+                        }
+                        emptyValueEncoding    = "Empty String"
+                        emptyValueLabelOption = "null"
+                        id                    = "CommandLine"
+                        name                  = "CommandLine"
+                        valueKind             = {
+                            type = "STRING"
+                        }
+                        viewType              = "text"
+                    },
+                    {
+                        allowEmpty            = true
+                        defaultValue          = {
+                            string = ""
+                        }
+                        emptyValueEncoding    = "Empty String"
+                        emptyValueLabelOption = "null"
+                        id                    = "DomainName"
+                        name                  = "DomainName"
+                        valueKind             = {
+                            type = "STRING"
+                        }
+                        viewType              = "text"
+                    },
+                    {
+                        allowEmpty            = true
+                        defaultValue          = {
+                            int64 = null
+                        }
+                        emptyValueEncoding    = "null"
+                        emptyValueLabelOption = "null"
+                        id                    = "AlertProcessID"
+                        name                  = "AlertProcessID or TargetProcessID"
+                        valueKind             = {
+                            type = "INT64"
+                        }
+                        viewType              = "numeric"
+                    },
+                ]
+                selectedStageId = "stage-059q1wzv"
+                timeRange       = {
+                    display               = "Past 30 days"
+                    endTime               = null
+                    millisFromCurrentTime = 2592000000
+                    originalDisplay       = "Past 30 days"
+                    startTime             = null
+                    timeRangeInfo         = {
+                        key        = "PRESETS"
+                        name       = "Presets"
+                        presetType = "PAST_30_DAYS"
+                    }
+                }
+            }
+        }
+    )
+    name       = "Crowdstrike Execution Details"
+    parameters = jsonencode(
+        [
+            {
+                defaultValue = {
+                    datasetref = {
+                        datasetId = "45996199"
+                    }
+                }
+                id           = "input-parameter-5407fumu"
+                name         = "Crowdstrike FDR Logs"
+                valueKind    = {
+                    arrayItemType   = null
+                    keyForDatasetId = null
+                    type            = "DATASETREF"
+                }
+            },
+            {
+                defaultValue = {
+                    string = ""
+                }
+                id           = "CommandLine"
+                name         = "CommandLine"
+                valueKind    = {
+                    arrayItemType   = null
+                    keyForDatasetId = null
+                    type            = "STRING"
+                }
+            },
+            {
+                defaultValue = {
+                    string = ""
+                }
+                id           = "DomainName"
+                name         = "DomainName"
+                valueKind    = {
+                    arrayItemType   = null
+                    keyForDatasetId = null
+                    type            = "STRING"
+                }
+            },
+            {
+                defaultValue = {
+                    int64 = null
+                }
+                id           = "AlertProcessID"
+                name         = "AlertProcessID or TargetProcessID"
+                valueKind    = {
+                    arrayItemType   = null
+                    keyForDatasetId = null
+                    type            = "INT64"
+                }
+            },
+        ]
+    )
+    stages     = jsonencode(
+        [
+            {
+                id       = "stage-059q1wzv"
+                input    = [
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Crowdstrike FDR Logs"
+                        inputRole   = "Data"
+                        stageId     = null
+                    },
+                ]
+                layout   = {
+                    cardLinks          = []
+                    dataLinks          = []
+                    dataTableViewState = {
+                        autoExpandColumnWidth       = false
+                        cellValuePresentation       = []
+                        columnOrderOverride         = [
+                            [
+                                1,
+                                "IsRootProcessID",
+                            ],
+                            [
+                                0,
+                                "timestamp",
+                            ],
+                            [
+                                2,
+                                "ParentBaseFileName",
+                            ],
+                            [
+                                9,
+                                "ImageFileName",
+                            ],
+                            [
+                                7,
+                                "aid",
+                            ],
+                            [
+                                5,
+                                "CommandLine",
+                            ],
+                            [
+                                4,
+                                "FileName",
+                            ],
+                            [
+                                3,
+                                "ParentFileName",
+                            ],
+                        ]
+                        columnVisibility            = [
+                            [
+                                "event_simpleName",
+                                false,
+                            ],
+                        ]
+                        columnWidths                = [
+                            [
+                                "_raw",
+                                702,
+                            ],
+                            [
+                                "CommandLine",
+                                472,
+                            ],
+                            [
+                                "TargetProcessId",
+                                176,
+                            ],
+                            [
+                                "Computer",
+                                194,
+                            ],
+                            [
+                                "FileName",
+                                240,
+                            ],
+                            [
+                                "OGProcessID",
+                                155,
+                            ],
+                            [
+                                "IsOGProcessID",
+                                172,
+                            ],
+                            [
+                                "ParentBaseFileName",
+                                195,
+                            ],
+                        ]
+                        defaultColumnWidth          = 70
+                        disableFixedLeftColumns     = false
+                        minColumnWidth              = 60
+                        preserveCellAndRowSelection = true
+                        rowHeights                  = []
+                        selection                   = {
+                            cells                = {
+                                IsRootProcessID = {
+                                    "416" = true
+                                }
+                            }
+                            columnSelectSequence = []
+                            columns              = {}
+                            highlightState       = {}
+                            rows                 = {}
+                            selectionType        = "cell"
+                        }
+                        tableWidth                  = 774
+                        viewType                    = "Auto"
+                    }
+                    disableOutput      = false
+                    index              = 0
+                    inputList          = [
+                        {
+                            id          = "query-input-kw44mwbj"
+                            inputName   = "Crowdstrike FDR Logs"
+                            inputRole   = "Data"
+                            isUserInput = true
+                            parameterId = "input-parameter-5407fumu"
+                        },
+                    ]
+                    isInternal         = false
+                    label              = "Process"
+                    managers           = []
+                    queryPresentation  = {
+                        columnStats         = {
+                            histogramBucketCount = "100"
+                            needDistinctCount    = true
+                            topKCount            = "100"
+                        }
+                        initialRollupFilter = {
+                            mode = "Last"
+                        }
+                        limit               = 10000
+                        linkify             = true
+                        loadEverything      = false
+                        progressive         = true
+                        resultKinds         = [
+                            "ResultKindSchema",
+                            "ResultKindData",
+                            "ResultKindColumnStats",
+                            "ResultKindVolumeStats",
+                            "ResultKindProgress",
+                        ]
+                        rollup              = {}
+                        volumeStats         = {
+                            bucketCount    = "100"
+                            needTotalCount = true
+                        }
+                    }
+                    renderType         = "TABLE"
+                    serializable       = true
+                    steps              = [
+                        {
+                            customName    = "Input"
+                            customSummary = "Crowdstrike FDR Logs"
+                            id            = "step-7nadjsct"
+                            index         = 0
+                            isPinned      = false
+                            opal          = []
+                            type          = "InputStep"
+                        },
+                        {
+                            customSummary = ""
+                            id            = "step-z3t0cqky"
+                            index         = 1
+                            isPinned      = false
+                            opal          = [
+                                "filter event_simpleName = \"ProcessRollup2\" or event_simpleName = \"SyntheticProcessRollup2\"",
+                                "make_col ",
+                                "    IsRootProcessID:case(",
+                                "  not is_null(TargetProcessId) and is_null(ParentProcessId) and is_null(ContextProcessId), true,",
+                                "  true, false",
+                                ")",
+                                "filter TargetProcessId = $AlertProcessID or is_null($AlertProcessID)",
+                                "",
+                                "make_col ImageFileName:string(_raw.ImageFileName)",
+                                "make_col CommandLine:string(_raw.CommandLine)",
+                                "make_col ParentFileName:string(_raw.ParentBaseFileName)",
+                                "filter search(CommandLine, $CommandLine)",
+                                "// go to the last \\ or / in the ImageFileName and grab everything after as the FileName",
+                                "extract_regex ImageFileName, /(?P<FileName>[^\\\\\\/]+$)/",
+                                "",
+                                "//statsby group_by(^Computer...,TargetProcessId,ImageFileName,FileName,CommandLine,OGProcessID,PID)",
+                                "",
+                                "",
+                                "//filter OGProcessID = true",
+                                "",
+                            ]
+                            type          = "unknown"
+                        },
+                    ]
+                    type               = "table"
+                    viewModel          = {
+                        builderOpalTab       = "OPAL"
+                        inspectRailCollapsed = true
+                        inspectRailPinned    = false
+                        inspectRailWidth     = 640
+                        railCollapseState    = {
+                            inputsOutputs = false
+                            minimap       = false
+                            note          = true
+                            script        = true
+                        }
+                        showTimeRuler        = true
+                        stageOutputHeight    = 62.054329371816635
+                        stageTab             = "table"
+                        thumbnailId          = "f02ceu9y"
+                    }
+                }
+                params   = null
+                pipeline = <<-EOT
+                    filter event_simpleName = "ProcessRollup2" or event_simpleName = "SyntheticProcessRollup2"
+                    make_col 
+                        IsRootProcessID:case(
+                      not is_null(TargetProcessId) and is_null(ParentProcessId) and is_null(ContextProcessId), true,
+                      true, false
+                    )
+                    filter TargetProcessId = $AlertProcessID or is_null($AlertProcessID)
+                    
+                    make_col ImageFileName:string(_raw.ImageFileName)
+                    make_col CommandLine:string(_raw.CommandLine)
+                    make_col ParentFileName:string(_raw.ParentBaseFileName)
+                    filter search(CommandLine, $CommandLine)
+                    // go to the last \ or / in the ImageFileName and grab everything after as the FileName
+                    extract_regex ImageFileName, /(?P<FileName>[^\\\/]+$)/
+                    
+                    //statsby group_by(^Computer...,TargetProcessId,ImageFileName,FileName,CommandLine,OGProcessID,PID)
+                    
+                    
+                    //filter OGProcessID = true
+                EOT
+            },
+            {
+                id       = "stage-sb45l1fy"
+                input    = [
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Crowdstrike FDR Logs"
+                        inputRole   = "Data"
+                        stageId     = null
+                    },
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Process Triggering Alert"
+                        inputRole   = "Data"
+                        stageId     = "stage-059q1wzv"
+                    },
+                ]
+                layout   = {
+                    cardLinks          = []
+                    dataLinks          = []
+                    dataTableViewState = {
+                        autoExpandColumnWidth       = false
+                        cellValuePresentation       = []
+                        columnOrderOverride         = [
+                            [
+                                6,
+                                "ImageFileName",
+                            ],
+                            [
+                                5,
+                                "CommandLine",
+                            ],
+                            [
+                                4,
+                                "FileName",
+                            ],
+                            [
+                                3,
+                                "OriginalProcess",
+                            ],
+                            [
+                                1,
+                                "IsRootProcessID",
+                            ],
+                            [
+                                0,
+                                "timestamp",
+                            ],
+                        ]
+                        columnVisibility            = []
+                        columnWidths                = [
+                            [
+                                "Computer",
+                                235,
+                            ],
+                            [
+                                "event_simpleName",
+                                209,
+                            ],
+                            [
+                                "CommandLine",
+                                732,
+                            ],
+                            [
+                                "ImageFileName",
+                                709,
+                            ],
+                        ]
+                        defaultColumnWidth          = 70
+                        disableFixedLeftColumns     = false
+                        minColumnWidth              = 60
+                        preserveCellAndRowSelection = true
+                        rowHeights                  = []
+                        selection                   = {
+                            cells                = {}
+                            columnSelectSequence = []
+                            columns              = {}
+                            highlightState       = {}
+                            rows                 = {}
+                            selectionType        = "table"
+                        }
+                        tableWidth                  = 550
+                        viewType                    = "Auto"
+                    }
+                    disableOutput      = false
+                    index              = 1
+                    inputList          = [
+                        {
+                            id          = "query-input-qqvsbvk9"
+                            inputName   = "Crowdstrike FDR Logs"
+                            inputRole   = "Data"
+                            isUserInput = true
+                            parameterId = "input-parameter-5407fumu"
+                        },
+                        {
+                            id          = "query-input-jdnzpow5"
+                            inputName   = "Process Triggering Alert"
+                            inputRole   = "Data"
+                            isUserInput = true
+                            stageId     = "stage-059q1wzv"
+                        },
+                    ]
+                    isInternal         = false
+                    label              = "Processes Parent"
+                    managers           = []
+                    queryPresentation  = {
+                        initialRollupFilter = {
+                            mode = "Last"
+                        }
+                        rollup              = {}
+                    }
+                    serializable       = true
+                    steps              = [
+                        {
+                            customName    = "Input"
+                            customSummary = "Crowdstrike FDR Logs"
+                            id            = "step-lztind3c"
+                            index         = 0
+                            isPinned      = false
+                            opal          = []
+                            type          = "InputStep"
+                        },
+                        {
+                            customSummary = ""
+                            id            = "step-znyigdqo"
+                            index         = 1
+                            isPinned      = false
+                            opal          = [
+                                "join on(TargetProcessId=@\"Process Triggering Alert\".ParentProcessId,frame(back:24h,ahead:24h)), AlertParentProcess:@\"Process Triggering Alert\".FileName",
+                                "make_col ",
+                                "    IsRootProcessID:case(",
+                                "  not is_null(TargetProcessId) and is_null(ParentProcessId) and is_null(ContextProcessId), true,",
+                                "  true, false",
+                                ")",
+                                "make_col ImageFileName:string(_raw.ImageFileName)",
+                                "make_col CommandLine:string(_raw.CommandLine)",
+                                "filter search(CommandLine, $CommandLine)",
+                                "// go to the last \\ or / in the ImageFileName and grab everything after as the FileName",
+                                "extract_regex ImageFileName, /(?P<FileName>[^\\\\\\/]+$)/",
+                                "",
+                                "// statsby group_by(^Computer...,ImageFileName,OriginalProcess,FileName,CommandLine,TargetProcessId,ContextProcessId,ParentProcessId)",
+                            ]
+                            type          = "unknown"
+                        },
+                    ]
+                    type               = "table"
+                    viewModel          = {
+                        builderOpalTab       = "OPAL"
+                        inspectRailCollapsed = true
+                        inspectRailPinned    = false
+                        inspectRailWidth     = 640
+                        railCollapseState    = {
+                            inputsOutputs = false
+                            minimap       = false
+                            note          = true
+                            script        = true
+                        }
+                        showTimeRuler        = true
+                        stageOutputHeight    = 73.3446519524618
+                        stageTab             = "table"
+                        thumbnailId          = "seiqefda"
+                    }
+                }
+                params   = null
+                pipeline = <<-EOT
+                    join on(TargetProcessId=@"Process Triggering Alert".ParentProcessId,frame(back:24h,ahead:24h)), AlertParentProcess:@"Process Triggering Alert".FileName
+                    make_col 
+                        IsRootProcessID:case(
+                      not is_null(TargetProcessId) and is_null(ParentProcessId) and is_null(ContextProcessId), true,
+                      true, false
+                    )
+                    make_col ImageFileName:string(_raw.ImageFileName)
+                    make_col CommandLine:string(_raw.CommandLine)
+                    filter search(CommandLine, $CommandLine)
+                    // go to the last \ or / in the ImageFileName and grab everything after as the FileName
+                    extract_regex ImageFileName, /(?P<FileName>[^\\\/]+$)/
+                    
+                    // statsby group_by(^Computer...,ImageFileName,OriginalProcess,FileName,CommandLine,TargetProcessId,ContextProcessId,ParentProcessId)
+                EOT
+            },
+            {
+                id       = "stage-lp4d6xw2"
+                input    = [
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Crowdstrike FDR Logs"
+                        inputRole   = "Data"
+                        stageId     = null
+                    },
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Process_-059q"
+                        inputRole   = "Data"
+                        stageId     = "stage-059q1wzv"
+                    },
+                ]
+                layout   = {
+                    cardLinks          = []
+                    dataLinks          = []
+                    dataTableViewState = {
+                        autoExpandColumnWidth       = false
+                        cellValuePresentation       = []
+                        columnOrderOverride         = [
+                            [
+                                5,
+                                "FileName",
+                            ],
+                            [
+                                3,
+                                "_raw",
+                            ],
+                            [
+                                2,
+                                "ChildProcess",
+                            ],
+                            [
+                                1,
+                                "Process",
+                            ],
+                        ]
+                        columnVisibility            = []
+                        columnWidths                = [
+                            [
+                                "Computer",
+                                235,
+                            ],
+                            [
+                                "ImageFileName",
+                                737,
+                            ],
+                            [
+                                "_raw",
+                                658,
+                            ],
+                        ]
+                        defaultColumnWidth          = 70
+                        disableFixedLeftColumns     = false
+                        minColumnWidth              = 60
+                        preserveCellAndRowSelection = true
+                        rowHeights                  = []
+                        selection                   = {
+                            cells                = {}
+                            columnSelectSequence = []
+                            columns              = {}
+                            highlightState       = {}
+                            rows                 = {}
+                            selectionType        = "table"
+                        }
+                        tableWidth                  = 550
+                        viewType                    = "Auto"
+                    }
+                    disableOutput      = false
+                    index              = 2
+                    inputList          = [
+                        {
+                            id          = "query-input-qqvsbvk9"
+                            inputName   = "Crowdstrike FDR Logs"
+                            inputRole   = "Data"
+                            isUserInput = true
+                            parameterId = "input-parameter-5407fumu"
+                        },
+                        {
+                            id          = "query-input-91z00puq"
+                            inputName   = "Process_-059q"
+                            inputRole   = "Data"
+                            isUserInput = true
+                            stageId     = "stage-059q1wzv"
+                        },
+                    ]
+                    isInternal         = false
+                    label              = "Spawned Contextual Events by Original Process"
+                    managers           = []
+                    queryPresentation  = {
+                        initialRollupFilter = {
+                            mode = "Last"
+                        }
+                        rollup              = {}
+                    }
+                    serializable       = true
+                    steps              = [
+                        {
+                            customName    = "Input"
+                            customSummary = "Crowdstrike FDR Logs"
+                            id            = "step-z2gxuihy"
+                            index         = 0
+                            isPinned      = false
+                            opal          = []
+                            type          = "InputStep"
+                        },
+                        {
+                            customSummary = ""
+                            id            = "step-ecda57a2"
+                            index         = 1
+                            isPinned      = false
+                            opal          = [
+                                "join on(ContextProcessId=@\"Process_-059q\".TargetProcessId,frame(back:24h,ahead:24h)), Process:@\"Process_-059q\".FileName",
+                                "// make_col ImageFileName:string(_raw.ImageFileName)",
+                                "// make_col CommandLine:string(_raw.CommandLine)",
+                                "// filter search(CommandLine, $CommandLine)",
+                                "// // go to the last \\ or / in the ImageFileName and grab everything after as the FileName",
+                                "// extract_regex ImageFileName, /(?P<FileName>[^\\\\\\/]+$)/",
+                                "",
+                                "// statsby group_by(^Computer...,ImageFileName,FileName,CommandLine,ChildProcess,TargetProcessId,ContextProcessId,ParentProcessId,PID)",
+                            ]
+                            type          = "unknown"
+                        },
+                    ]
+                    type               = "table"
+                    viewModel          = {
+                        builderOpalTab       = "OPAL"
+                        inspectRailCollapsed = true
+                        inspectRailPinned    = false
+                        inspectRailWidth     = 640
+                        railCollapseState    = {
+                            inputsOutputs = false
+                            minimap       = false
+                            note          = true
+                            script        = true
+                        }
+                        showTimeRuler        = true
+                        stageOutputHeight    = 71.90152801358234
+                        stageTab             = "table"
+                        thumbnailId          = "tmaz2nl2"
+                    }
+                }
+                params   = null
+                pipeline = <<-EOT
+                    join on(ContextProcessId=@"Process_-059q".TargetProcessId,frame(back:24h,ahead:24h)), Process:@"Process_-059q".FileName
+                    // make_col ImageFileName:string(_raw.ImageFileName)
+                    // make_col CommandLine:string(_raw.CommandLine)
+                    // filter search(CommandLine, $CommandLine)
+                    // // go to the last \ or / in the ImageFileName and grab everything after as the FileName
+                    // extract_regex ImageFileName, /(?P<FileName>[^\\\/]+$)/
+                    
+                    // statsby group_by(^Computer...,ImageFileName,FileName,CommandLine,ChildProcess,TargetProcessId,ContextProcessId,ParentProcessId,PID)
+                EOT
+            },
+            {
+                id       = "stage-0debo49r"
+                input    = [
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Crowdstrike FDR Logs"
+                        inputRole   = "Data"
+                        stageId     = null
+                    },
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Process_-059q"
+                        inputRole   = "Data"
+                        stageId     = "stage-059q1wzv"
+                    },
+                ]
+                layout   = {
+                    cardLinks          = []
+                    dataLinks          = []
+                    dataTableViewState = {
+                        autoExpandColumnWidth       = false
+                        cellValuePresentation       = []
+                        columnOrderOverride         = [
+                            [
+                                4,
+                                "FileName",
+                            ],
+                            [
+                                3,
+                                "GrandChildProcess",
+                            ],
+                            [
+                                2,
+                                "OriginalProcess",
+                            ],
+                            [
+                                1,
+                                "Computer",
+                            ],
+                            [
+                                12,
+                                "event_platform",
+                            ],
+                            [
+                                6,
+                                "ImageFileName",
+                            ],
+                            [
+                                5,
+                                "CommandLine",
+                            ],
+                        ]
+                        columnVisibility            = []
+                        columnWidths                = [
+                            [
+                                "Computer",
+                                146,
+                            ],
+                            [
+                                "ImageFileName",
+                                737,
+                            ],
+                        ]
+                        defaultColumnWidth          = 70
+                        disableFixedLeftColumns     = false
+                        minColumnWidth              = 60
+                        preserveCellAndRowSelection = true
+                        rowHeights                  = []
+                        selection                   = {
+                            cells                = {}
+                            columnSelectSequence = [
+                                "ContextProcessId",
+                            ]
+                            columns              = {
+                                ContextProcessId = true
+                            }
+                            highlightState       = {}
+                            rows                 = {}
+                            selectionType        = "column"
+                        }
+                        tableWidth                  = 774
+                        viewType                    = "Auto"
+                    }
+                    disableOutput      = false
+                    index              = 3
+                    inputList          = [
+                        {
+                            id          = "query-input-qqvsbvk9"
+                            inputName   = "Crowdstrike FDR Logs"
+                            inputRole   = "Data"
+                            isUserInput = true
+                            parameterId = "input-parameter-5407fumu"
+                        },
+                        {
+                            id          = "query-input-aytcxvkx"
+                            inputName   = "Process_-059q"
+                            inputRole   = "Data"
+                            isUserInput = true
+                            stageId     = "stage-059q1wzv"
+                        },
+                    ]
+                    isInternal         = false
+                    label              = "Spawned Process by Original Process"
+                    managers           = []
+                    queryPresentation  = {
+                        initialRollupFilter = {
+                            mode = "Last"
+                        }
+                        rollup              = {}
+                    }
+                    serializable       = true
+                    steps              = [
+                        {
+                            customName    = "Input"
+                            customSummary = "Crowdstrike FDR Logs"
+                            id            = "step-9d8r7ku9"
+                            index         = 0
+                            isPinned      = false
+                            opal          = []
+                            type          = "InputStep"
+                        },
+                        {
+                            customSummary = ""
+                            id            = "step-1ok263s0"
+                            index         = 1
+                            isPinned      = false
+                            opal          = [
+                                "join on(ParentProcessId=@\"Process_-059q\".TargetProcessId,frame(back:24h,ahead:24h)), OriginalProcess:@\"Process_-059q\".FileName",
+                                "make_col ImageFileName:string(_raw.ImageFileName)",
+                                "make_col CommandLine:string(_raw.CommandLine)",
+                                "filter search(CommandLine, $CommandLine)",
+                                "// go to the last \\ or / in the ImageFileName and grab everything after as the FileName",
+                                "extract_regex ImageFileName, /(?P<FileName>[^\\\\\\/]+$)/",
+                                "",
+                                "// statsby group_by(^Computer...,ImageFileName,FileName,CommandLine,ChildProcess,TargetProcessId,ContextProcessId,ParentProcessId,PID)",
+                            ]
+                            type          = "unknown"
+                        },
+                    ]
+                    type               = "table"
+                    viewModel          = {
+                        builderOpalTab       = "OPAL"
+                        inspectRailCollapsed = true
+                        inspectRailPinned    = false
+                        inspectRailWidth     = 640
+                        railCollapseState    = {
+                            inputsOutputs = false
+                            minimap       = false
+                            note          = true
+                            script        = true
+                        }
+                        showTimeRuler        = true
+                        stageOutputHeight    = 71.90152801358234
+                        stageTab             = "table"
+                        thumbnailId          = "iru3pjbj"
+                    }
+                }
+                params   = null
+                pipeline = <<-EOT
+                    join on(ParentProcessId=@"Process_-059q".TargetProcessId,frame(back:24h,ahead:24h)), OriginalProcess:@"Process_-059q".FileName
+                    make_col ImageFileName:string(_raw.ImageFileName)
+                    make_col CommandLine:string(_raw.CommandLine)
+                    filter search(CommandLine, $CommandLine)
+                    // go to the last \ or / in the ImageFileName and grab everything after as the FileName
+                    extract_regex ImageFileName, /(?P<FileName>[^\\\/]+$)/
+                    
+                    // statsby group_by(^Computer...,ImageFileName,FileName,CommandLine,ChildProcess,TargetProcessId,ContextProcessId,ParentProcessId,PID)
+                EOT
+            },
+            {
+                id       = "stage-bbvyst9n"
+                input    = [
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Crowdstrike FDR Logs"
+                        inputRole   = "Data"
+                        stageId     = null
+                    },
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Process_-059q"
+                        inputRole   = "Data"
+                        stageId     = "stage-059q1wzv"
+                    },
+                ]
+                layout   = {
+                    cardLinks          = []
+                    dataLinks          = []
+                    dataTableViewState = {
+                        autoExpandColumnWidth       = false
+                        cellValuePresentation       = []
+                        columnOrderOverride         = [
+                            [
+                                6,
+                                "RemoteAddressIP4",
+                            ],
+                            [
+                                2,
+                                "RemoteAddressIP4",
+                            ],
+                            [
+                                1,
+                                "OrignialProcess",
+                            ],
+                        ]
+                        columnVisibility            = [
+                            [
+                                "A_CrowdstrikeFDRLogs_count",
+                                false,
+                            ],
+                            [
+                                "A_RemoteAddressIP4_count_distinct_exact",
+                                false,
+                            ],
+                        ]
+                        columnWidths                = [
+                            [
+                                "Computer",
+                                150,
+                            ],
+                            [
+                                "RemoteAddressIP4",
+                                268,
+                            ],
+                            [
+                                "A_RemoteAddressIP4_count_distinct_exact",
+                                115,
+                            ],
+                        ]
+                        defaultColumnWidth          = 70
+                        disableFixedLeftColumns     = false
+                        minColumnWidth              = 60
+                        preserveCellAndRowSelection = true
+                        rowHeights                  = []
+                        selection                   = {
+                            cells                = {}
+                            columnSelectSequence = []
+                            columns              = {}
+                            highlightState       = {}
+                            rows                 = {}
+                            selectionType        = "table"
+                        }
+                        tableWidth                  = 662
+                        viewType                    = "Auto"
+                    }
+                    disableOutput      = false
+                    index              = 4
+                    inputList          = [
+                        {
+                            id          = "query-input-68cgdcp7"
+                            inputName   = "Crowdstrike FDR Logs"
+                            inputRole   = "Data"
+                            isUserInput = false
+                            parameterId = "input-parameter-5407fumu"
+                        },
+                        {
+                            id          = "query-input-360i3orf"
+                            inputName   = "Process_-059q"
+                            inputRole   = "Data"
+                            isUserInput = true
+                            stageId     = "stage-059q1wzv"
+                        },
+                    ]
+                    isInternal         = false
+                    label              = "Remote Connections"
+                    managers           = []
+                    queryPresentation  = {
+                        initialRollupFilter = {
+                            mode = "Last"
+                        }
+                        rollup              = {}
+                        sort                = [
+                            {
+                                ascending  = false
+                                columnName = "A_CrowdstrikeFDRLogs_count"
+                            },
+                        ]
+                    }
+                    serializable       = true
+                    steps              = [
+                        {
+                            customName    = "Input"
+                            customSummary = "Crowdstrike FDR Logs"
+                            id            = "step-xhxzs8p5"
+                            index         = 0
+                            isPinned      = false
+                            opal          = []
+                            type          = "InputStep"
+                        },
+                        {
+                            customSummary = ""
+                            id            = "step-ew7y9el8"
+                            index         = 1
+                            isPinned      = false
+                            opal          = [
+                                "filter event_simpleName = \"NetworkConnectIP4\"",
+                                "join on(ContextProcessId=@\"Process_-059q\".TargetProcessId,frame(back:24h,ahead:24h)), OrignialProcess:@\"Process_-059q\".FileName",
+                                "make_col RemoteAddressIP4:string(_raw.RemoteAddressIP4)",
+                                "statsby  group_by(^Computer..., OrignialProcess,RemoteAddressIP4)",
+                            ]
+                            type          = "unknown"
+                        },
+                    ]
+                    type               = "table"
+                    viewModel          = {
+                        builderOpalTab       = "OPAL"
+                        inspectRailCollapsed = true
+                        inspectRailPinned    = false
+                        inspectRailWidth     = 640
+                        railCollapseState    = {
+                            inputsOutputs = false
+                            minimap       = false
+                            note          = true
+                            script        = true
+                        }
+                        showTimeRuler        = true
+                        stageTab             = "table"
+                        thumbnailId          = "z44oydci"
+                    }
+                }
+                params   = null
+                pipeline = <<-EOT
+                    filter event_simpleName = "NetworkConnectIP4"
+                    join on(ContextProcessId=@"Process_-059q".TargetProcessId,frame(back:24h,ahead:24h)), OrignialProcess:@"Process_-059q".FileName
+                    make_col RemoteAddressIP4:string(_raw.RemoteAddressIP4)
+                    statsby  group_by(^Computer..., OrignialProcess,RemoteAddressIP4)
+                EOT
+            },
+            {
+                id       = "stage-tsi7ga9g"
+                input    = [
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Crowdstrike FDR Logs"
+                        inputRole   = "Data"
+                        stageId     = null
+                    },
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Process_-059q"
+                        inputRole   = "Data"
+                        stageId     = "stage-059q1wzv"
+                    },
+                ]
+                layout   = {
+                    cardLinks          = []
+                    dataLinks          = []
+                    dataTableViewState = {
+                        autoExpandColumnWidth       = false
+                        cellValuePresentation       = []
+                        columnOrderOverride         = []
+                        columnVisibility            = [
+                            [
+                                "A_CrowdstrikeFDRLogs_count",
+                                false,
+                            ],
+                        ]
+                        columnWidths                = [
+                            [
+                                "Computer",
+                                208,
+                            ],
+                            [
+                                "DomainName",
+                                340,
+                            ],
+                        ]
+                        defaultColumnWidth          = 70
+                        disableFixedLeftColumns     = false
+                        minColumnWidth              = 60
+                        preserveCellAndRowSelection = true
+                        rowHeights                  = []
+                        selection                   = {
+                            cells                = {}
+                            columnSelectSequence = []
+                            columns              = {}
+                            highlightState       = {}
+                            rows                 = {}
+                            selectionType        = "table"
+                        }
+                        tableWidth                  = 662
+                        viewType                    = "Auto"
+                    }
+                    disableOutput      = false
+                    index              = 5
+                    inputList          = [
+                        {
+                            id          = "query-input-a4zeldie"
+                            inputName   = "Crowdstrike FDR Logs"
+                            inputRole   = "Data"
+                            isUserInput = true
+                            parameterId = "input-parameter-5407fumu"
+                        },
+                        {
+                            id          = "query-input-n2mg2380"
+                            inputName   = "Process_-059q"
+                            inputRole   = "Data"
+                            isUserInput = true
+                            stageId     = "stage-059q1wzv"
+                        },
+                    ]
+                    isInternal         = false
+                    label              = "DNS Requests"
+                    managers           = []
+                    queryPresentation  = {
+                        initialRollupFilter = {
+                            mode = "Last"
+                        }
+                        rollup              = {}
+                        sort                = [
+                            {
+                                ascending  = false
+                                columnName = "A_CrowdstrikeFDRLogs_count"
+                            },
+                        ]
+                    }
+                    serializable       = true
+                    steps              = [
+                        {
+                            customName    = "Input"
+                            customSummary = "Crowdstrike FDR Logs"
+                            id            = "step-5w1kb8y3"
+                            index         = 0
+                            isPinned      = false
+                            opal          = []
+                            type          = "InputStep"
+                        },
+                        {
+                            customSummary = ""
+                            id            = "step-819iufju"
+                            index         = 1
+                            isPinned      = false
+                            opal          = [
+                                "filter event_simpleName = \"DnsRequest\"",
+                                "join on(ContextProcessId=@\"Process_-059q\".TargetProcessId,frame(back:24h,ahead:24h)), OringalProcess:@\"Process_-059q\".FileName",
+                                "make_col DomainName:string(_raw.DomainName)",
+                                "filter search(DomainName, $DomainName)",
+                                "statsby A_CrowdstrikeFDRLogs_count:count(), group_by(^Computer..., OringalProcess,DomainName,ContextProcessId)",
+                            ]
+                            type          = "unknown"
+                        },
+                    ]
+                    type               = "table"
+                    viewModel          = {
+                        builderOpalTab       = "OPAL"
+                        inspectRailCollapsed = true
+                        inspectRailPinned    = false
+                        inspectRailWidth     = 640
+                        railCollapseState    = {
+                            inputsOutputs = false
+                            minimap       = false
+                            note          = true
+                            script        = true
+                        }
+                        showTimeRuler        = true
+                        stageTab             = "table"
+                        thumbnailId          = "o6rgb38z"
+                    }
+                }
+                params   = null
+                pipeline = <<-EOT
+                    filter event_simpleName = "DnsRequest"
+                    join on(ContextProcessId=@"Process_-059q".TargetProcessId,frame(back:24h,ahead:24h)), OringalProcess:@"Process_-059q".FileName
+                    make_col DomainName:string(_raw.DomainName)
+                    filter search(DomainName, $DomainName)
+                    statsby A_CrowdstrikeFDRLogs_count:count(), group_by(^Computer..., OringalProcess,DomainName,ContextProcessId)
+                EOT
+            },
+            {
+                id       = "stage-fzv27j2h"
+                input    = [
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Crowdstrike FDR Logs"
+                        inputRole   = "Data"
+                        stageId     = null
+                    },
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Process_-059q"
+                        inputRole   = "Data"
+                        stageId     = "stage-059q1wzv"
+                    },
+                ]
+                layout   = {
+                    cardLinks          = []
+                    dataLinks          = []
+                    dataTableViewState = {
+                        autoExpandColumnWidth       = false
+                        cellValuePresentation       = []
+                        columnOrderOverride         = [
+                            [
+                                4,
+                                "OriginalProcess",
+                            ],
+                            [
+                                3,
+                                "RegObjectName",
+                            ],
+                            [
+                                2,
+                                "TargetFile",
+                            ],
+                        ]
+                        columnVisibility            = [
+                            [
+                                "A_CrowdstrikeFDRLogs_count",
+                                false,
+                            ],
+                            [
+                                "RegObjectName",
+                                false,
+                            ],
+                            [
+                                "TargetFileName",
+                                false,
+                            ],
+                        ]
+                        columnWidths                = [
+                            [
+                                "RegObjectName",
+                                766,
+                            ],
+                            [
+                                "RegStringValue",
+                                1582,
+                            ],
+                            [
+                                "OriginalProcess",
+                                352,
+                            ],
+                            [
+                                "TargetFile",
+                                1145.9,
+                            ],
+                        ]
+                        defaultColumnWidth          = 70
+                        disableFixedLeftColumns     = false
+                        minColumnWidth              = 60
+                        preserveCellAndRowSelection = true
+                        rowHeights                  = []
+                        selection                   = {
+                            cells                = {}
+                            columnSelectSequence = []
+                            columns              = {}
+                            highlightState       = {}
+                            rows                 = {}
+                            selectionType        = "table"
+                        }
+                        tableWidth                  = 1336
+                        viewType                    = "Auto"
+                    }
+                    disableOutput      = false
+                    index              = 6
+                    inputList          = [
+                        {
+                            id          = "query-input-qluvsv72"
+                            inputName   = "Crowdstrike FDR Logs"
+                            inputRole   = "Data"
+                            isUserInput = true
+                            parameterId = "input-parameter-5407fumu"
+                        },
+                        {
+                            id          = "query-input-l0unubcj"
+                            inputName   = "Process_-059q"
+                            inputRole   = "Data"
+                            isUserInput = true
+                            stageId     = "stage-059q1wzv"
+                        },
+                    ]
+                    isInternal         = false
+                    label              = "Registry Updates"
+                    managers           = []
+                    queryPresentation  = {
+                        initialRollupFilter = {
+                            mode = "Last"
+                        }
+                        rollup              = {}
+                        sort                = [
+                            {
+                                ascending  = false
+                                columnName = "A_CrowdstrikeFDRLogs_count"
+                            },
+                        ]
+                    }
+                    serializable       = true
+                    steps              = [
+                        {
+                            customName    = "Input"
+                            customSummary = "Crowdstrike FDR Logs"
+                            id            = "step-ez1op5jj"
+                            index         = 0
+                            isPinned      = false
+                            opal          = []
+                            type          = "InputStep"
+                        },
+                        {
+                            customSummary = ""
+                            id            = "step-p73h9gff"
+                            index         = 1
+                            isPinned      = false
+                            opal          = [
+                                "filter event_simpleName ~ reg*",
+                                "join on(ContextProcessId=@\"Process_-059q\".TargetProcessId,frame(back:24h,ahead:24h)), OriginalProcess:@\"Process_-059q\".FileName",
+                            ]
+                            type          = "unknown"
+                        },
+                        {
+                            action        = {
+                                params  = {
+                                    autoConvertType   = true
+                                    checkedKeys       = [
+                                        "RegObjectName",
+                                    ]
+                                    columnId          = "_raw"
+                                    columnType        = "object"
+                                    existingColumnIds = [
+                                        "timestamp",
+                                        "event_simpleName",
+                                        "event_platform",
+                                        "Computer",
+                                        "aid",
+                                        "PID",
+                                        "TargetProcessId",
+                                        "ContextProcessId",
+                                        "ParentProcessId",
+                                        "_raw",
+                                        "OriginalProcess",
+                                    ]
+                                    expandedKeys      = [
+                                        "RegObjectName",
+                                    ]
+                                    extraKeys         = []
+                                    typeByPath        = {
+                                        RegObjectName = "string"
+                                    }
+                                }
+                                summary = null
+                                type    = "ExtractJSON"
+                            }
+                            customSummary = "string(_raw.RegObjectName)"
+                            id            = "step-n28smypp"
+                            index         = 2
+                            isPinned      = false
+                            opal          = [
+                                "make_col RegObjectName:string(_raw.RegObjectName)",
+                            ]
+                            type          = "unknown"
+                        },
+                        {
+                            action        = {
+                                params  = {
+                                    autoConvertType   = true
+                                    checkedKeys       = [
+                                        "TargetFileName",
+                                    ]
+                                    columnId          = "_raw"
+                                    columnType        = "object"
+                                    existingColumnIds = [
+                                        "timestamp",
+                                        "event_simpleName",
+                                        "event_platform",
+                                        "Computer",
+                                        "aid",
+                                        "PID",
+                                        "TargetProcessId",
+                                        "ContextProcessId",
+                                        "ParentProcessId",
+                                        "_raw",
+                                        "RegObjectName",
+                                        "OriginalProcess",
+                                    ]
+                                    expandedKeys      = [
+                                        "TargetFileName",
+                                    ]
+                                    extraKeys         = []
+                                    typeByPath        = {
+                                        TargetFileName = "string"
+                                    }
+                                }
+                                summary = null
+                                type    = "ExtractJSON"
+                            }
+                            customSummary = "string(_raw.TargetFileName)"
+                            id            = "step-s4kmeee2"
+                            index         = 3
+                            isPinned      = false
+                            opal          = [
+                                "make_col TargetFileName:string(_raw.TargetFileName)",
+                            ]
+                            type          = "unknown"
+                        },
+                        {
+                            customSummary = ""
+                            id            = "step-nxzq36ci"
+                            index         = 4
+                            isPinned      = false
+                            opal          = [
+                                "",
+                                "make_col",
+                                "     TargetFile:coalesce(RegObjectName,TargetFileName)",
+                            ]
+                            type          = "unknown"
+                        },
+                    ]
+                    type               = "table"
+                    viewModel          = {
+                        builderOpalTab       = "OPAL"
+                        inspectRailCollapsed = true
+                        inspectRailPinned    = false
+                        inspectRailWidth     = 346
+                        railCollapseState    = {
+                            inputsOutputs = false
+                            minimap       = false
+                            note          = true
+                            script        = true
+                        }
+                        showTimeRuler        = true
+                        stageTab             = "table"
+                        thumbnailId          = "n3b3awrq"
+                    }
+                }
+                params   = null
+                pipeline = <<-EOT
+                    filter event_simpleName ~ reg*
+                    join on(ContextProcessId=@"Process_-059q".TargetProcessId,frame(back:24h,ahead:24h)), OriginalProcess:@"Process_-059q".FileName
+                    make_col RegObjectName:string(_raw.RegObjectName)
+                    make_col TargetFileName:string(_raw.TargetFileName)
+                    
+                    make_col
+                         TargetFile:coalesce(RegObjectName,TargetFileName)
+                EOT
+            },
+            {
+                id       = "stage-lu62uzjo"
+                input    = [
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Crowdstrike FDR Logs"
+                        inputRole   = "Data"
+                        stageId     = null
+                    },
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Process_-059q"
+                        inputRole   = "Data"
+                        stageId     = "stage-059q1wzv"
+                    },
+                ]
+                layout   = {
+                    cardLinks          = []
+                    dataLinks          = []
+                    dataTableViewState = {
+                        autoExpandColumnWidth       = false
+                        cellValuePresentation       = []
+                        columnOrderOverride         = [
+                            [
+                                5,
+                                "TargetFileName",
+                            ],
+                            [
+                                2,
+                                "OriginalProcess",
+                            ],
+                            [
+                                1,
+                                "Computer",
+                            ],
+                        ]
+                        columnVisibility            = [
+                            [
+                                "A_CrowdstrikeFDRLogs_count",
+                                false,
+                            ],
+                        ]
+                        columnWidths                = [
+                            [
+                                "_raw",
+                                933,
+                            ],
+                            [
+                                "TargetFileName",
+                                1141,
+                            ],
+                            [
+                                "Computer",
+                                192,
+                            ],
+                        ]
+                        defaultColumnWidth          = 70
+                        disableFixedLeftColumns     = false
+                        minColumnWidth              = 60
+                        preserveCellAndRowSelection = true
+                        rowHeights                  = []
+                        selection                   = {
+                            cells                = {}
+                            columnSelectSequence = []
+                            columns              = {}
+                            highlightState       = {}
+                            rows                 = {}
+                            selectionType        = "table"
+                        }
+                        tableWidth                  = 662
+                        viewType                    = "Auto"
+                    }
+                    disableOutput      = false
+                    index              = 7
+                    inputList          = [
+                        {
+                            id          = "query-input-sd68zwcn"
+                            inputName   = "Crowdstrike FDR Logs"
+                            inputRole   = "Data"
+                            isUserInput = false
+                            parameterId = "input-parameter-5407fumu"
+                        },
+                        {
+                            id          = "query-input-x6n2ecey"
+                            inputName   = "Process_-059q"
+                            inputRole   = "Data"
+                            isUserInput = true
+                            stageId     = "stage-059q1wzv"
+                        },
+                    ]
+                    isInternal         = false
+                    label              = "Files Written"
+                    managers           = []
+                    queryPresentation  = {
+                        initialRollupFilter = {
+                            mode = "Last"
+                        }
+                        rollup              = {}
+                        sort                = [
+                            {
+                                ascending  = false
+                                columnName = "A_CrowdstrikeFDRLogs_count"
+                            },
+                        ]
+                    }
+                    serializable       = true
+                    steps              = [
+                        {
+                            customName    = "Input"
+                            customSummary = "Crowdstrike FDR Logs"
+                            id            = "step-9njankq2"
+                            index         = 0
+                            isPinned      = false
+                            opal          = []
+                            type          = "InputStep"
+                        },
+                        {
+                            customSummary = ""
+                            id            = "step-u1y4iujh"
+                            index         = 1
+                            isPinned      = false
+                            opal          = [
+                                "filter event_simpleName ~ written",
+                                "join on(ContextProcessId=@\"Process_-059q\".TargetProcessId,frame(back:24h,ahead:24h)), OriginalProcess:@\"Process_-059q\".FileName",
+                                "make_col TargetFileName:string(_raw.TargetFileName)",
+                                "// statsby A_CrowdstrikeFDRLogs_count:count(), group_by(^Computer..., event_simpleName, TargetFileName, ContextProcessId)",
+                            ]
+                            type          = "unknown"
+                        },
+                    ]
+                    type               = "table"
+                    viewModel          = {
+                        builderOpalTab       = "OPAL"
+                        inspectRailCollapsed = true
+                        inspectRailPinned    = false
+                        inspectRailWidth     = 640
+                        railCollapseState    = {
+                            inputsOutputs = false
+                            minimap       = false
+                            note          = true
+                            script        = true
+                        }
+                        showTimeRuler        = true
+                        stageTab             = "table"
+                        thumbnailId          = "e2dj3xr6"
+                    }
+                }
+                params   = null
+                pipeline = <<-EOT
+                    filter event_simpleName ~ written
+                    join on(ContextProcessId=@"Process_-059q".TargetProcessId,frame(back:24h,ahead:24h)), OriginalProcess:@"Process_-059q".FileName
+                    make_col TargetFileName:string(_raw.TargetFileName)
+                    // statsby A_CrowdstrikeFDRLogs_count:count(), group_by(^Computer..., event_simpleName, TargetFileName, ContextProcessId)
+                EOT
+            },
+            {
+                id       = "stage-btinv4yd"
+                input    = [
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Crowdstrike FDR Logs"
+                        inputRole   = "Data"
+                        stageId     = null
+                    },
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Process_-059q"
+                        inputRole   = "Data"
+                        stageId     = "stage-059q1wzv"
+                    },
+                ]
+                layout   = {
+                    cardLinks          = []
+                    dataLinks          = []
+                    dataTableViewState = {
+                        autoExpandColumnWidth       = false
+                        cellValuePresentation       = []
+                        columnOrderOverride         = [
+                            [
+                                8,
+                                "splitCallStack",
+                            ],
+                            [
+                                7,
+                                "CallStackModuleNames",
+                            ],
+                            [
+                                4,
+                                "CallStackFileNames",
+                            ],
+                            [
+                                3,
+                                "ParentBaseFileName",
+                            ],
+                            [
+                                2,
+                                "ModuleLoadedOK",
+                            ],
+                        ]
+                        columnVisibility            = [
+                            [
+                                "event_simpleName",
+                                false,
+                            ],
+                        ]
+                        columnWidths                = [
+                            [
+                                "ModuleLoadedOK",
+                                198,
+                            ],
+                            [
+                                "CallStackFileNames",
+                                732,
+                            ],
+                            [
+                                "ParentBaseFileName",
+                                220,
+                            ],
+                        ]
+                        defaultColumnWidth          = 70
+                        disableFixedLeftColumns     = false
+                        minColumnWidth              = 60
+                        preserveCellAndRowSelection = true
+                        rowHeights                  = []
+                        selection                   = {
+                            cells                = {}
+                            columnSelectSequence = []
+                            columns              = {}
+                            highlightState       = {}
+                            rows                 = {}
+                            selectionType        = "table"
+                        }
+                        tableWidth                  = 662
+                        viewType                    = "Auto"
+                    }
+                    disableOutput      = false
+                    index              = 8
+                    inputList          = [
+                        {
+                            id          = "query-input-8n937ynb"
+                            inputName   = "Crowdstrike FDR Logs"
+                            inputRole   = "Data"
+                            isUserInput = true
+                            parameterId = "input-parameter-5407fumu"
+                        },
+                        {
+                            id          = "query-input-70bea6w0"
+                            inputName   = "Process_-059q"
+                            inputRole   = "Data"
+                            isUserInput = true
+                            stageId     = "stage-059q1wzv"
+                        },
+                    ]
+                    isInternal         = false
+                    label              = "Call Stack Module Loading"
+                    managers           = []
+                    queryPresentation  = {
+                        initialRollupFilter = {
+                            mode = "Last"
+                        }
+                        rollup              = {}
+                    }
+                    serializable       = true
+                    steps              = [
+                        {
+                            customName    = "Input"
+                            customSummary = "Crowdstrike FDR Logs"
+                            id            = "step-9oo2gm32"
+                            index         = 0
+                            isPinned      = false
+                            opal          = []
+                            type          = "InputStep"
+                        },
+                        {
+                            customSummary = ""
+                            id            = "step-5q6pjuzb"
+                            index         = 1
+                            isPinned      = false
+                            opal          = [
+                                "join on(TargetProcessId=@\"Process_-059q\".TargetProcessId)",
+                                "make_col CallStackModuleNames:string(_raw.CallStackModuleNames)",
+                                "make_col normalizedField:replace_regex(CallStackModuleNames, /[(\\\\|\\\\\\\\)(\\\\\\\\)(+)]/, \",\")",
+                                "make_col splitCallStack:split(normalizedField, \",\")",
+                                "make_col CallStackFileNames:(get_regex_all(string(splitCallStack), /(\\w+\\.dll|\\w+.exe|\\w+\\.sh)/,\"i\"))",
+                                "filter not is_null(CallStackModuleNames)",
+                                "make_col ModuleLoadedOK:case (",
+                                "     CallStackFileNames=(array(parse_json(\"[\\\"ntdll.dll\\\",\\\"KernelBase.dll\\\",\\\"kernel32.dll\\\",\\\"firefox.exe\\\"]\"))), \"LoadedOK\",",
+                                "     CallStackFileNames = array(parse_json(\"[\\\"ntdll.dll\\\",\\\"KernelBase.dll\\\",\\\"kernel32.dll\\\",\\\"msedge.dll\\\"]\")), \"LoadedOK\",",
+                                "     CallStackFileNames = array(parse_json(\"[\\\"ntdll.dll\\\",\\\"KernelBase.dll\\\",\\\"kernel32.dll\\\",\\\"chrome.dll\\\"]\")), \"LoadedOK\",",
+                                "     CallStackFileNames = array(parse_json(\"[\\\"ntdll.dll\\\",\\\"KernelBase.dll\\\",\\\"advapi32.dll\\\",\\\"chrome.exe\\\",\\\"chrome.dll\\\",\\\"kernel32.dll\\\"]\")), \"LoadedOK\",",
+                                "     true,\"NO\"",
+                                ")",
+                                "make_col ParentBaseFileName:string(_raw.ParentBaseFileName)",
+                                "// pick_col",
+                                "//     timestamp,",
+                                "//     label(^Computer),",
+                                "//     CallStackFileNames,",
+                                "//     ModuleLoadedOK,",
+                                "//     CallStackModuleNames,",
+                                "//     ImageFileName:string(_raw.ImageFileName),",
+                                "//     ParentBaseFileName:string(_raw.ParentBaseFileName),",
+                                "//     GrandParentBaseFileName:string(_raw.GrandParentBaseFileName),",
+                                "//     CommandLine:string(_raw.CommandLine),",
+                                "//     TargetProcessId,",
+                                "//     ParentProcessId",
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                            ]
+                            type          = "unknown"
+                        },
+                    ]
+                    type               = "table"
+                    viewModel          = {
+                        builderOpalTab       = "OPAL"
+                        inspectRailCollapsed = true
+                        inspectRailPinned    = false
+                        inspectRailWidth     = 640
+                        railCollapseState    = {
+                            inputsOutputs = false
+                            minimap       = false
+                            note          = true
+                            script        = true
+                        }
+                        showTimeRuler        = true
+                        stageOutputHeight    = 64.94057724957555
+                        stageTab             = "table"
+                        thumbnailId          = "zmtgkusf"
+                    }
+                }
+                params   = null
+                pipeline = <<-EOT
+                    join on(TargetProcessId=@"Process_-059q".TargetProcessId)
+                    make_col CallStackModuleNames:string(_raw.CallStackModuleNames)
+                    make_col normalizedField:replace_regex(CallStackModuleNames, /[(\\|\\\\)(\\\\)(+)]/, ",")
+                    make_col splitCallStack:split(normalizedField, ",")
+                    make_col CallStackFileNames:(get_regex_all(string(splitCallStack), /(\w+\.dll|\w+.exe|\w+\.sh)/,"i"))
+                    filter not is_null(CallStackModuleNames)
+                    make_col ModuleLoadedOK:case (
+                         CallStackFileNames=(array(parse_json("[\"ntdll.dll\",\"KernelBase.dll\",\"kernel32.dll\",\"firefox.exe\"]"))), "LoadedOK",
+                         CallStackFileNames = array(parse_json("[\"ntdll.dll\",\"KernelBase.dll\",\"kernel32.dll\",\"msedge.dll\"]")), "LoadedOK",
+                         CallStackFileNames = array(parse_json("[\"ntdll.dll\",\"KernelBase.dll\",\"kernel32.dll\",\"chrome.dll\"]")), "LoadedOK",
+                         CallStackFileNames = array(parse_json("[\"ntdll.dll\",\"KernelBase.dll\",\"advapi32.dll\",\"chrome.exe\",\"chrome.dll\",\"kernel32.dll\"]")), "LoadedOK",
+                         true,"NO"
+                    )
+                    make_col ParentBaseFileName:string(_raw.ParentBaseFileName)
+                    // pick_col
+                    //     timestamp,
+                    //     label(^Computer),
+                    //     CallStackFileNames,
+                    //     ModuleLoadedOK,
+                    //     CallStackModuleNames,
+                    //     ImageFileName:string(_raw.ImageFileName),
+                    //     ParentBaseFileName:string(_raw.ParentBaseFileName),
+                    //     GrandParentBaseFileName:string(_raw.GrandParentBaseFileName),
+                    //     CommandLine:string(_raw.CommandLine),
+                    //     TargetProcessId,
+                    //     ParentProcessId
+                EOT
+            },
+            {
+                id       = "stage-nr0i57gu"
+                input    = [
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Process_-059q"
+                        inputRole   = "Data"
+                        stageId     = "stage-059q1wzv"
+                    },
+                    {
+                        datasetId   = null
+                        datasetPath = null
+                        inputName   = "Crowdstrike FDR Logs"
+                        inputRole   = "Data"
+                        stageId     = null
+                    },
+                ]
+                layout   = {
+                    cardLinks          = []
+                    dataLinks          = []
+                    dataTableViewState = {
+                        autoExpandColumnWidth       = false
+                        cellValuePresentation       = []
+                        columnOrderOverride         = []
+                        columnVisibility            = []
+                        columnWidths                = [
+                            [
+                                "Computer",
+                                235,
+                            ],
+                        ]
+                        defaultColumnWidth          = 70
+                        disableFixedLeftColumns     = false
+                        minColumnWidth              = 60
+                        preserveCellAndRowSelection = true
+                        rowHeights                  = []
+                        selection                   = {
+                            cells                = {}
+                            columnSelectSequence = [
+                                "ParentProcessId",
+                            ]
+                            columns              = {
+                                ParentProcessId = true
+                            }
+                            highlightState       = {}
+                            rows                 = {}
+                            selectionType        = "column"
+                        }
+                        tableWidth                  = 1336
+                        viewType                    = "Auto"
+                    }
+                    disableOutput      = false
+                    index              = 9
+                    inputList          = [
+                        {
+                            id          = "query-input-2c4dngmh"
+                            inputName   = "Process_-059q"
+                            inputRole   = "Data"
+                            isUserInput = true
+                            stageId     = "stage-059q1wzv"
+                        },
+                        {
+                            id          = "query-input-hl9ep055"
+                            inputName   = "Crowdstrike FDR Logs"
+                            inputRole   = "Data"
+                            isUserInput = true
+                            parameterId = "input-parameter-5407fumu"
+                        },
+                    ]
+                    isInternal         = false
+                    label              = "Raw Logs"
+                    managers           = []
+                    queryPresentation  = {
+                        initialRollupFilter = {
+                            mode = "Last"
+                        }
+                        rollup              = {}
+                    }
+                    serializable       = true
+                    steps              = [
+                        {
+                            customName    = "Input"
+                            customSummary = "Process_-059q"
+                            id            = "step-gh16s11u"
+                            index         = 0
+                            isPinned      = false
+                            opal          = []
+                            type          = "InputStep"
+                        },
+                        {
+                            customSummary = ""
+                            id            = "step-0d3bimou"
+                            index         = 1
+                            isPinned      = false
+                            opal          = [
+                                "follow TargetProcessId=@\"Crowdstrike FDR Logs\".TargetProcessId or TargetProcessId=@\"Crowdstrike FDR Logs\".ContextProcessId",
+                                "//filter event_simpleName = \"ProcessRollup2\" or event_simpleName = \"SyntheticProcessRollup2\"",
+                                "// make_col CommandLine:string(_raw.CommandLine),",
+                                "//     ImageFileName:string(_raw.ImageFileName),",
+                                "//     OriginalFilename:string(_raw.OriginalFilename),",
+                                "//     ParentBaseFileName:string(_raw.ParentBaseFileName)",
+                            ]
+                            type          = "unknown"
+                        },
+                    ]
+                    type               = "table"
+                    viewModel          = {
+                        builderOpalTab       = "OPAL"
+                        inspectRailCollapsed = true
+                        inspectRailPinned    = false
+                        inspectRailWidth     = 640
+                        railCollapseState    = {
+                            inputsOutputs = false
+                            minimap       = false
+                            note          = true
+                            script        = true
+                        }
+                        showTimeRuler        = true
+                        stageTab             = "table"
+                        thumbnailId          = "b8okqxyl"
+                    }
+                }
+                params   = null
+                pipeline = <<-EOT
+                    follow TargetProcessId=@"Crowdstrike FDR Logs".TargetProcessId or TargetProcessId=@"Crowdstrike FDR Logs".ContextProcessId
+                    //filter event_simpleName = "ProcessRollup2" or event_simpleName = "SyntheticProcessRollup2"
+                    // make_col CommandLine:string(_raw.CommandLine),
+                    //     ImageFileName:string(_raw.ImageFileName),
+                    //     OriginalFilename:string(_raw.OriginalFilename),
+                    //     ParentBaseFileName:string(_raw.ParentBaseFileName)
+                EOT
+            },
+        ]
+    )
+    workspace  = "o:::workspace:43784541"
+}

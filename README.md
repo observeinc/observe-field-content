@@ -20,7 +20,7 @@ This repository contains field contributed content which includes:
 
 Here's a quick summary of the various folders in this repository:
 
-- **[Complete-Packages](Complete-Packages)**: 
+- **[Packages](Packages)**: 
   - Complete packages cataloged by vendor and application.
   - Queries, dashboards, monitors, etc.
 - **[Dashboards](Dashboards)**: 

@@ -27,7 +27,7 @@ Here's a quick summary of the various folders in this repository:
   - These folders contain Dashboard yaml files, screenshots and if relevant, links to the required dataset defintions for them to populate correctly, required source data, and Dashboard links to quickly copy and paste to new tenant.
 - **[Monitors](Monitors)**:
   - Folder specifically for custom Monitor opal and yaml files.
-- **[Dataset-definitions](Dataset-defintions)**:
+- **[Dataset-definitions](Dataset-definitions)**:
   - Standalone dataset definitions, raw opal and required inputs to populate correctly. 
 - **[Saved-Queries](Saved-Queries)**:
   - Standalone OPAL queries.

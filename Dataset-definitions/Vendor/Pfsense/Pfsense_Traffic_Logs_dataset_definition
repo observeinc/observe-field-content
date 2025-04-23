@@ -1,0 +1,28 @@
+filter OBSERVATION_KIND = "otellogs"
+filter ((string(FIELDS.logs.attributes.appname) = "filterlog"))
+make_col message:string(FIELDS.logs.attributes.message)
+
+// make_col log:string(parse_json(string(message)).message)
+make_col timestamp:from_nanoseconds(FIELDS.logs.observed_time_unix_nano)
+set_valid_from options(max_time_diff: 1h), timestamp
+
+extract_regex message,/\d+,,,\d+,(?P<dest_interface>[^,]*),(?P<activity>[^,]*),(?P<outcome>[^,]*),(?P<direction>[^,]*),([^,]*,){8}(?P<protocol>(tcp|udp)),[^,]*,(?P<src_ip>[^,]*),(?P<dest_ip>[^,]*),(?P<src_port>[^,]*),(?P<dest_port>[^,]*)/
+
+make_col
+    src_ip:ipv4(src_ip),
+    dest_ip:ipv4(dest_ip)
+
+pick_col
+    timestamp,
+    src_ip,
+    src_port,
+    dest_ip,
+    dest_port,
+    activity,
+    outcome,
+    direction,
+    protocol,
+    dest_interface,
+    message
+    
+interface "log"
